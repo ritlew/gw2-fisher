@@ -214,7 +214,12 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
             <Text>Maguuma Collection</Text>
             <SimpleGrid columns={7} spacing={1}>
               {fishList.map((fish) => (
-                <Popover key={fish.name} trigger="hover">
+                <Popover
+                  key={fish.name}
+                  trigger="hover"
+                  openDelay={0}
+                  closeDelay={0}
+                >
                   <PopoverTrigger>
                     <Box
                       position="relative"
