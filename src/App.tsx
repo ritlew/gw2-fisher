@@ -1,32 +1,44 @@
+// react
 import React, { useState } from 'react'
+
+// chakra ui
 import {
   ChakraProvider,
   extendTheme,
+  Container,
   Box,
-  Center,
-  SimpleGrid,
   Button,
+  HStack,
 } from '@chakra-ui/react'
+
+// local
 import FishToJson from './FishToJson'
 import Tracker from './Tracker'
+import { ColorModeSwitcher } from './ColorModeSwitcher'
 
-const theme = extendTheme({ initialColorMode: 'dark' })
+const theme = extendTheme({
+  initialColorMode: 'dark',
+})
 
 export const App = () => {
   const [page, setPage] = useState<'tracker' | 'input'>('tracker')
 
   return (
     <ChakraProvider theme={theme}>
-      <Box pt={4}>
-        <Center>
-          <SimpleGrid columns={2} spacing={4}>
+      <Container maxW="container.xl">
+        <HStack pt={4} justifyContent="space-between">
+          <Box />
+          <HStack>
             <Button onClick={() => setPage('tracker')}>Tracker</Button>
             <Button onClick={() => setPage('input')}>Input</Button>
-          </SimpleGrid>
-        </Center>
+          </HStack>
+          <Box>
+            <ColorModeSwitcher />
+          </Box>
+        </HStack>
         {page === 'tracker' && <Tracker />}
         {page === 'input' && <FishToJson />}
-      </Box>
+      </Container>
     </ChakraProvider>
   )
 }

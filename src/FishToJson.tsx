@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from 'react'
 
 // chakra ui
 import {
-  Container,
   FormControl,
   FormLabel,
   Input,
@@ -13,7 +12,6 @@ import {
 } from '@chakra-ui/react'
 
 // third party
-import { Select } from 'chakra-react-select'
 import ResizeTextarea from 'react-textarea-autosize'
 import CollectionSelect, {
   CollectionName,
@@ -21,14 +19,7 @@ import CollectionSelect, {
 } from './selects/CollectionSelect'
 import HoleSelect, { HoleName, holeOptions } from './selects/HoleSelect'
 import BaitSelect, { Bait } from './selects/BaitSelect'
-import TimeSelect from './selects/TimeSelect'
-
-const times = ['Any', 'Daytime', 'Nighttime', 'Dusk/Dawn']
-type Time = typeof times[number]
-const timeOptions: { value: Time; label: Time }[] = times.map((time) => ({
-  value: time,
-  label: time,
-}))
+import TimeSelect, { Time } from './selects/TimeSelect'
 
 interface FishToJsonProps {}
 
@@ -60,57 +51,55 @@ const FishToJson: React.FC<FishToJsonProps> = ({}) => {
   }, [jsonStr])
 
   return (
-    <Container maxW="xl">
-      <SimpleGrid marginTop="2rem" columns={1} spacing="4">
-        <FormControl>
-          <FormLabel>Name</FormLabel>
-          <Input
-            ref={ref}
-            variant="outline"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-          />
-        </FormControl>
-        <CollectionSelect value={collection} onChange={setCollection} />
-        <HoleSelect
-          multi
-          value={holes}
-          onChange={setHoles}
-          options={holeOptions}
+    <SimpleGrid marginTop="2rem" columns={1} spacing="4">
+      <FormControl>
+        <FormLabel>Name</FormLabel>
+        <Input
+          ref={ref}
+          variant="outline"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
         />
-        <BaitSelect value={bait} onChange={setBait} />
-        <TimeSelect value={time} onChange={setTime} />
-        <FormControl>
-          <FormLabel>JSON</FormLabel>
-          <Textarea
-            as={ResizeTextarea}
-            readOnly
-            resize="vertical"
-            value={jsonStr}
-          />
-        </FormControl>
-        <SimpleGrid columns={2} spacing="4">
-          <Button
-            flexGrow={1}
-            onClick={() => navigator.clipboard.writeText(jsonStr)}
-          >
-            Copy
-          </Button>
-          <Button
-            flexGrow={1}
-            onClick={() => {
-              setName('')
-              setHoles([])
-              setBait('Any')
-              setTime('Any')
-              ref.current?.focus()
-            }}
-          >
-            Reset
-          </Button>
-        </SimpleGrid>
+      </FormControl>
+      <CollectionSelect value={collection} onChange={setCollection} />
+      <HoleSelect
+        multi
+        value={holes}
+        onChange={setHoles}
+        options={holeOptions}
+      />
+      <BaitSelect value={bait} onChange={setBait} />
+      <TimeSelect value={time} onChange={setTime} />
+      <FormControl>
+        <FormLabel>JSON</FormLabel>
+        <Textarea
+          as={ResizeTextarea}
+          readOnly
+          resize="vertical"
+          value={jsonStr}
+        />
+      </FormControl>
+      <SimpleGrid columns={2} spacing="4">
+        <Button
+          flexGrow={1}
+          onClick={() => navigator.clipboard.writeText(jsonStr)}
+        >
+          Copy
+        </Button>
+        <Button
+          flexGrow={1}
+          onClick={() => {
+            setName('')
+            setHoles([])
+            setBait('Any')
+            setTime('Any')
+            ref.current?.focus()
+          }}
+        >
+          Reset
+        </Button>
       </SimpleGrid>
-    </Container>
+    </SimpleGrid>
   )
 }
 

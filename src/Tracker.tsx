@@ -3,7 +3,7 @@ import React, { useEffect, useReducer, useState } from 'react'
 
 // chakra ui
 import {
-  Container,
+  Box,
   SimpleGrid,
   TableContainer,
   Table,
@@ -108,7 +108,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
   }, [hiddenFish, showHidden, filterText, collections, holes, baits, times])
 
   return (
-    <Container w="100%" maxWidth="container.lg" marginY="4">
+    <Box>
       <HStack p={2} alignItems="end">
         <FormControl w="auto" flexGrow="1">
           <FormLabel mb="0">Fish Name</FormLabel>
@@ -162,7 +162,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
           </Tbody>
         </Table>
       </TableContainer>
-    </Container>
+    </Box>
   )
 }
 
