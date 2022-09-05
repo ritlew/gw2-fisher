@@ -4,6 +4,7 @@ import React, { useEffect, useReducer, useState } from 'react'
 // chakra ui
 import {
   Box,
+  Collapse,
   Divider,
   Text,
   Image,
@@ -35,7 +36,7 @@ import HoleSelect, { HoleName } from './selects/HoleSelect'
 import fishJSON from './fish.json'
 import Fish from './fish.interface'
 import FishRow, { getRarityColor } from './FishRow'
-import { CheckIcon } from '@chakra-ui/icons'
+import { ArrowDownIcon, ArrowUpIcon, CheckIcon } from '@chakra-ui/icons'
 
 const fishList = fishJSON as Fish[]
 
@@ -67,7 +68,7 @@ interface TrackerProps {}
 
 const Tracker: React.FC<TrackerProps> = ({}) => {
   const [view, setView] = useState<'table' | 'collection'>('table')
-  console.log(view)
+  const [open, setOpen] = useState(true)
   const [filterText, setFilterText] = useState('')
   const [showHidden, toggleHide] = useReducer(
     (showHidden) => !showHidden,
@@ -122,43 +123,61 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
 
   return (
     <Box>
-      <HStack p={2} alignItems="end">
-        <FormControl w="auto" flexGrow="1">
-          <FormLabel mb="0">Fish Name</FormLabel>
-          <Input
-            size="sm"
-            value={filterText}
-            onChange={(event) => setFilterText(event.target.value)}
-          />
-        </FormControl>
-        <FormControl w="auto" flexGrow="1">
-          <FormLabel mb="0">Sort (not working)</FormLabel>
-          <Select size="sm">
-            <option value="collection a-z">Collection (A-Z)</option>
-          </Select>
-        </FormControl>
-        <FormControl w="auto" flexGrow="1">
-          <FormLabel mb="0">View</FormLabel>
-          <Select
-            size="sm"
-            onChange={(event) =>
-              setView(event.target.value as 'table' | 'collection')
-            }
-          >
-            <option value="table">Table</option>
-            <option value="collection">Collection</option>
-          </Select>
-        </FormControl>
-        <Button size="sm" onClick={() => toggleHide()}>
-          {showHidden ? 'Hide Hidden' : 'Show Hidden'}
+      <VStack p="2">
+        <HStack w="100%" alignItems="end">
+          <FormControl w="auto" flexGrow="1">
+            <FormLabel mb="0">Fish Name</FormLabel>
+            <Input
+              size="sm"
+              value={filterText}
+              onChange={(event) => setFilterText(event.target.value)}
+            />
+          </FormControl>
+          <FormControl w="auto" flexGrow="1">
+            <FormLabel mb="0">Sort (not working)</FormLabel>
+            <Select size="sm">
+              <option value="collection a-z">Collection (A-Z)</option>
+            </Select>
+          </FormControl>
+          <FormControl w="auto" flexGrow="1">
+            <FormLabel mb="0">View</FormLabel>
+            <Select
+              size="sm"
+              onChange={(event) =>
+                setView(event.target.value as 'table' | 'collection')
+              }
+            >
+              <option value="table">Table</option>
+              <option value="collection">Collection</option>
+            </Select>
+          </FormControl>
+          <Button size="sm" onClick={() => toggleHide()}>
+            {showHidden ? 'Hide Hidden' : 'Show Hidden'}
+          </Button>
+        </HStack>
+        <Box w="100%">
+          <Collapse in={open}>
+            <SimpleGrid columns={2} spacing={2}>
+              <CollectionSelect
+                multi
+                value={collections}
+                onChange={setCollections}
+              />
+              <HoleSelect multi value={holes} onChange={setHoles} />
+              <BaitSelect multi value={baits} onChange={setBaits} />
+              <TimeSelect multi value={times} onChange={setTimes} />
+            </SimpleGrid>
+          </Collapse>
+        </Box>
+        <Button
+          w="100%"
+          size="xs"
+          leftIcon={open ? <ArrowUpIcon /> : <ArrowDownIcon />}
+          onClick={() => setOpen(!open)}
+        >
+          Filters
         </Button>
-      </HStack>
-      <SimpleGrid columns={2} spacing={2} p={2}>
-        <CollectionSelect multi value={collections} onChange={setCollections} />
-        <HoleSelect multi value={holes} onChange={setHoles} />
-        <BaitSelect multi value={baits} onChange={setBaits} />
-        <TimeSelect multi value={times} onChange={setTimes} />
-      </SimpleGrid>
+      </VStack>
       {view === 'table' && (
         <TableContainer py={6}>
           <Table size="sm">
