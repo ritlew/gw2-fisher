@@ -156,7 +156,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
           </Button>
         </HStack>
         <Box w="100%">
-          <Collapse in={open}>
+          <Collapse in={open} style={{ overflow: 'unset' }}>
             <SimpleGrid columns={2} spacing={2}>
               <CollectionSelect
                 multi
