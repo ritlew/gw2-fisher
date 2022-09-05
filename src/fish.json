@@ -1,0 +1,239 @@
+[
+  {
+    "name": "Brackish Goby",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "rarity": "Basic",
+    "img": "brackish-goby.png"
+  },
+  {
+    "name": "Oscar",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "rarity": "Common",
+    "img": "oscar.png"
+  },
+  {
+    "name": "Bicuda",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Freshwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "rarity": "Masterwork",
+    "img": "bicuda.png"
+  },
+  {
+    "name": "Pacu",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Freshwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "rarity": "Rare",
+    "img": "pacu.png"
+  },
+  {
+    "name": "Arowana",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Freshwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "rarity": "Exotic",
+    "img": "arowana.png"
+  },
+  {
+    "name": "Golden Dorado",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Freshwater Fish"
+    ],
+    "bait": "Sparkfly Larvae",
+    "time": "Daytime",
+    "rarity": "Ascended",
+    "img": "golden-dorado.png"
+  },
+  {
+    "name": "Arapaima",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Freshwater Fish"
+    ],
+    "bait": "Sparkfly Larvae",
+    "time": "Daytime",
+    "rarity": "Legendary",
+    "img": "arapaima.png"
+  },
+  {
+    "name": "Piranha",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "rarity": "Basic",
+    "img": "piranha.png"
+  },
+  {
+    "name": "Silver Drum",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "rarity": "Common",
+    "img": "silver-drum.png"
+  },
+  {
+    "name": "Payara",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Freshwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "rarity": "Masterwork",
+    "img": "payara.png"
+  },
+  {
+    "name": "Peacock Bass",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Freshwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "rarity": "Rare",
+    "img": "peacock-bass.png"
+  },
+  {
+    "name": "Sardinata",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Freshwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "rarity": "Exotic",
+    "img": "sardinata.png"
+  },
+  {
+    "name": "Jundia",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Freshwater Fish"
+    ],
+    "bait": "Sparkfly Larvae",
+    "time": "Any",
+    "rarity": "Ascended",
+    "img": "jundia.png"
+  },
+  {
+    "name": "Goliath Grouper",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Saltwater Fish"
+    ],
+    "bait": "Sardines",
+    "time": "Any",
+    "rarity": "Legendary",
+    "img": "goliath-grouper.png"
+  },
+  {
+    "name": "Snook",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "rarity": "Basic",
+    "img": "snook.png"
+  },
+  {
+    "name": "Surubim",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "rarity": "Common",
+    "img": "surubim.png"
+  },
+  {
+    "name": "Maguuma Trout",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Saltwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "rarity": "Masterwork",
+    "img": "maguuma-trout.png"
+  },
+  {
+    "name": "Wolffish",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Saltwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "rarity": "Rare",
+    "img": "wolffish.png"
+  },
+  {
+    "name": "Maguuma Jack",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Saltwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "rarity": "Exotic",
+    "img": "maguuma-jack.png"
+  },
+  {
+    "name": "Rainbow Glowfish",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Saltwater Fish"
+    ],
+    "bait": "Sardines",
+    "time": "Nighttime",
+    "rarity": "Ascended",
+    "img": "rainbow-glowfish.png"
+  },
+  {
+    "name": "Royal Starfish",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Saltwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "rarity": "Legendary",
+    "img": "royal-starfish.png"
+  }
+]
