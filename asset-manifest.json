@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/gw2-fisher/static/js/main.f72976b8.js",
+    "main.js": "/gw2-fisher/static/js/main.b9e1b0aa.js",
     "static/js/787.9a4b030e.chunk.js": "/gw2-fisher/static/js/787.9a4b030e.chunk.js",
     "index.html": "/gw2-fisher/index.html",
-    "main.f72976b8.js.map": "/gw2-fisher/static/js/main.f72976b8.js.map",
+    "main.b9e1b0aa.js.map": "/gw2-fisher/static/js/main.b9e1b0aa.js.map",
     "787.9a4b030e.chunk.js.map": "/gw2-fisher/static/js/787.9a4b030e.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.f72976b8.js"
+    "static/js/main.b9e1b0aa.js"
   ]
 }
