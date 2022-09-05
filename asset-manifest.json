@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/gw2-fisher/static/js/main.a038e39e.js",
+    "static/js/787.9a4b030e.chunk.js": "/gw2-fisher/static/js/787.9a4b030e.chunk.js",
+    "index.html": "/gw2-fisher/index.html",
+    "main.a038e39e.js.map": "/gw2-fisher/static/js/main.a038e39e.js.map",
+    "787.9a4b030e.chunk.js.map": "/gw2-fisher/static/js/787.9a4b030e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.a038e39e.js"
+  ]
+}
