@@ -257,7 +257,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
                       )}
                     </Box>
                   </PopoverTrigger>
-                  <PopoverContent p="2">
+                  <PopoverContent p="2" pointerEvents="none">
                     <VStack alignItems="left" spacing="4">
                       <Box
                         display="flex"
