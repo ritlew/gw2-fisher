@@ -4,6 +4,8 @@ import React, { useEffect, useReducer, useState } from 'react'
 // chakra ui
 import {
   Box,
+  Text,
+  Image,
   SimpleGrid,
   TableContainer,
   Table,
@@ -17,6 +19,8 @@ import {
   HStack,
   Select,
   Button,
+  Center,
+  VStack,
 } from '@chakra-ui/react'
 import CollectionSelect, { CollectionName } from './selects/CollectionSelect'
 import BaitSelect, { Bait } from './selects/BaitSelect'
@@ -24,9 +28,12 @@ import TimeSelect, { Time } from './selects/TimeSelect'
 import HoleSelect, { HoleName } from './selects/HoleSelect'
 
 // local
-import fishList from './fish.json'
+import fishJSON from './fish.json'
 import Fish from './fish.interface'
-import FishRow from './FishRow'
+import FishRow, { getRarityColor } from './FishRow'
+import { CheckIcon } from '@chakra-ui/icons'
+
+const fishList = fishJSON as Fish[]
 
 const useHiddenFish = (): [
   string[],
@@ -55,6 +62,8 @@ const useHiddenFish = (): [
 interface TrackerProps {}
 
 const Tracker: React.FC<TrackerProps> = ({}) => {
+  const [view, setView] = useState<'table' | 'collection'>('table')
+  console.log(view)
   const [filterText, setFilterText] = useState('')
   const [showHidden, toggleHide] = useReducer(
     (showHidden) => !showHidden,
@@ -124,6 +133,18 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
             <option value="collection a-z">Collection (A-Z)</option>
           </Select>
         </FormControl>
+        <FormControl w="auto" flexGrow="1">
+          <FormLabel mb="0">View</FormLabel>
+          <Select
+            size="sm"
+            onChange={(event) =>
+              setView(event.target.value as 'table' | 'collection')
+            }
+          >
+            <option value="table">Table</option>
+            <option value="collection">Collection</option>
+          </Select>
+        </FormControl>
         <Button size="sm" onClick={() => toggleHide()}>
           {showHidden ? 'Hide Hidden' : 'Show Hidden'}
         </Button>
@@ -134,34 +155,87 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
         <BaitSelect multi value={baits} onChange={setBaits} />
         <TimeSelect multi value={times} onChange={setTimes} />
       </SimpleGrid>
-      <TableContainer py={6}>
-        <Table size="sm">
-          <Thead>
-            <Tr>
-              <Th />
-              <Th>Name</Th>
-              <Th>Collection</Th>
-              <Th>Bait</Th>
-              <Th>Time</Th>
-              <Th>Holes</Th>
-              <Th align="right" />
-            </Tr>
-          </Thead>
-          <Tbody>
-            {displayedFish
-              .filter((fish) => showHidden || !hiddenFish.includes(fish.name))
-              .map((fish) => (
-                <FishRow
+      {view === 'table' && (
+        <TableContainer py={6}>
+          <Table size="sm">
+            <Thead>
+              <Tr>
+                <Th />
+                <Th>Name</Th>
+                <Th>Collection</Th>
+                <Th>Bait</Th>
+                <Th>Time</Th>
+                <Th>Holes</Th>
+                <Th align="right" />
+              </Tr>
+            </Thead>
+            <Tbody>
+              {displayedFish
+                .filter((fish) => showHidden || !hiddenFish.includes(fish.name))
+                .map((fish) => (
+                  <FishRow
+                    key={fish.name}
+                    fish={fish}
+                    hidden={hiddenFish.includes(fish.name)}
+                    onHide={(name) => hideFish(name)}
+                    onShow={(name) => showFish(name)}
+                  />
+                ))}
+            </Tbody>
+          </Table>
+        </TableContainer>
+      )}
+      {view === 'collection' && (
+        <Center py="6">
+          <VStack>
+            <Text>Maguuma Collection</Text>
+            <SimpleGrid columns={7} spacing={1}>
+              {fishList.map((fish) => (
+                <Box
                   key={fish.name}
-                  fish={fish}
-                  hidden={hiddenFish.includes(fish.name)}
-                  onHide={(name) => hideFish(name)}
-                  onShow={(name) => showFish(name)}
-                />
+                  position="relative"
+                  w="64px"
+                  h="64px"
+                  cursor="pointer"
+                  onClick={() =>
+                    hiddenFish.includes(fish.name)
+                      ? showFish(fish.name)
+                      : hideFish(fish.name)
+                  }
+                >
+                  <Image
+                    position="absolute"
+                    border={`2px ${getRarityColor(fish.rarity, {
+                      text: true,
+                    })} solid`}
+                    borderRadius="sm"
+                    w="64px"
+                    h="64px"
+                    src={`${process.env.PUBLIC_URL}/fish-images/${fish.img}`}
+                  />
+                  {hiddenFish.includes(fish.name) && (
+                    <>
+                      <Box
+                        w="64px"
+                        h="64px"
+                        bgColor="blackAlpha.800"
+                        position="absolute"
+                      />
+                      <Center height="100%">
+                        <CheckIcon
+                          fontSize="32px"
+                          color="blue.400"
+                          zIndex={500}
+                        />
+                      </Center>
+                    </>
+                  )}
+                </Box>
               ))}
-          </Tbody>
-        </Table>
-      </TableContainer>
+            </SimpleGrid>
+          </VStack>
+        </Center>
+      )}
     </Box>
   )
 }

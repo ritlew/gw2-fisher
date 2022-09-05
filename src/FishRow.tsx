@@ -8,7 +8,7 @@ import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
 // local
 import Fish from './fish.interface'
 
-const getRarityColor = (
+export const getRarityColor = (
   rarity: Fish['rarity'],
   { text }: { text?: boolean } = {}
 ) => {
