@@ -206,7 +206,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
                   <Th align="right" />
                 </Tr>
               </Thead>
-              <Tbody overflowY="auto" display="block" h="100%">
+              <Tbody overflowY="auto" display="block" h="calc(100% - 25px)">
                 {displayedFish
                   .filter(
                     (fish) => showHidden || !hiddenFish.includes(fish.name)
