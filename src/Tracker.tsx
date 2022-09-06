@@ -26,6 +26,7 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
+  Checkbox,
 } from '@chakra-ui/react'
 import CollectionSelect, {
   CollectionName,
@@ -73,6 +74,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
   const [view, setView] = useState<'table' | 'collection'>('table')
   const [open, setOpen] = useState(true)
   const [filterText, setFilterText] = useState('')
+  const [includeAny, setIncludeAny] = useState(true)
   const [showHidden, toggleHide] = useReducer(
     (showHidden) => !showHidden,
     false
@@ -103,33 +105,40 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
       }
       */
       if (
-        !fish.holes.includes('Any') &&
         holes.length > 0 &&
-        !holes.some((hole) => fish.holes.includes(hole))
+        ((includeAny && fish.holes.includes('Any')) ||
+          holes.some((hole) => fish.holes.includes(hole)))
       ) {
-        return false
+        return true
       }
       if (
-        fish.bait !== 'Any' &&
         baits.length > 0 &&
-        !baits.includes(fish.bait)
+        ((includeAny && fish.bait === 'Any') || baits.includes(fish.bait))
       ) {
-        return false
+        return true
       }
       if (
-        fish.time !== 'Any' &&
         times.length > 0 &&
-        !times.includes(fish.time)
+        ((!includeAny && fish.time === 'Any') || times.includes(fish.time))
       ) {
-        return false
+        return true
       }
-      return true
+      return holes.length === 0 && baits.length === 0 && times.length === 0
     })
 
     filteredFish.sort((f1, f2) => f1.collection.localeCompare(f2.collection))
 
     setDisplayedFish(filteredFish)
-  }, [hiddenFish, showHidden, filterText, collection, holes, baits, times])
+  }, [
+    includeAny,
+    hiddenFish,
+    showHidden,
+    filterText,
+    collection,
+    holes,
+    baits,
+    times,
+  ])
 
   return (
     <Box display="flex" flexDir="column" height="100%">
@@ -185,6 +194,15 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
               />
               <TimeSelect multi value={times} onChange={setTimes} />
             </SimpleGrid>
+            <Center>
+              <Checkbox
+                mt={2}
+                isChecked={includeAny}
+                onChange={(event) => setIncludeAny(event.target.checked)}
+              >
+                Always include &quot;Any&quot;
+              </Checkbox>
+            </Center>
           </Collapse>
         </Box>
         <Button
