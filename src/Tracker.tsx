@@ -177,7 +177,12 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
                 value={holes}
                 onChange={setHoles}
               />
-              <BaitSelect multi value={baits} onChange={setBaits} />
+              <BaitSelect
+                multi
+                collection={collection}
+                value={baits}
+                onChange={setBaits}
+              />
               <TimeSelect multi value={times} onChange={setTimes} />
             </SimpleGrid>
           </Collapse>
