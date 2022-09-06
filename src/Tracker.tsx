@@ -227,79 +227,85 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
         {view === 'collection' && (
           <Center py="6">
             <VStack>
-              <Text>Maguuma Collection</Text>
+              <Text>{collection}</Text>
               <SimpleGrid columns={7} spacing={1}>
-                {fishList.map((fish) => (
-                  <Popover
-                    key={fish.name}
-                    trigger="hover"
-                    openDelay={0}
-                    closeDelay={0}
-                  >
-                    <PopoverTrigger>
-                      <Box
-                        position="relative"
-                        w="64px"
-                        h="64px"
-                        cursor="pointer"
-                        onClick={() =>
-                          hiddenFish.includes(fish.name)
-                            ? showFish(fish.name)
-                            : hideFish(fish.name)
-                        }
-                      >
-                        <Image
-                          position="absolute"
-                          border={`2px ${getRarityColor(fish.rarity, {
-                            text: true,
-                          })} solid`}
-                          borderRadius="sm"
+                {fishList
+                  .filter((fish) => fish.collection === collection)
+                  .map((fish) => (
+                    <Popover
+                      key={fish.name}
+                      trigger="hover"
+                      openDelay={0}
+                      closeDelay={0}
+                    >
+                      <PopoverTrigger>
+                        <Box
+                          position="relative"
                           w="64px"
                           h="64px"
-                          src={`${process.env.PUBLIC_URL}/fish-images/${fish.img}`}
-                        />
-                        {hiddenFish.includes(fish.name) && (
-                          <>
-                            <Box
-                              w="64px"
-                              h="64px"
-                              bgColor="blackAlpha.800"
-                              position="absolute"
-                            />
-                            <Center h="100%" w="100%" position="absolute">
-                              <CheckIcon fontSize="32px" color="blue.400" />
-                            </Center>
-                          </>
-                        )}
-                      </Box>
-                    </PopoverTrigger>
-                    <PopoverContent p="2" pointerEvents="none">
-                      <VStack alignItems="left" spacing="4">
-                        <Box
-                          display="flex"
-                          justifyContent="space-between"
-                          alignItems="center"
+                          cursor="pointer"
+                          onClick={() =>
+                            hiddenFish.includes(fish.name)
+                              ? showFish(fish.name)
+                              : hideFish(fish.name)
+                          }
                         >
-                          <Text fontSize="lg">{fish.name}</Text>
-                          <Text
-                            fontSize="sm"
-                            color={getRarityColor(fish.rarity)}
-                          >
-                            {fish.rarity}
-                          </Text>
+                          <Image
+                            position="absolute"
+                            border={`2px ${getRarityColor(fish.rarity, {
+                              text: true,
+                            })} solid`}
+                            borderRadius="sm"
+                            w="64px"
+                            h="64px"
+                            src={fish.img}
+                          />
+                          {hiddenFish.includes(fish.name) && (
+                            <>
+                              <Box
+                                w="64px"
+                                h="64px"
+                                bgColor="blackAlpha.800"
+                                position="absolute"
+                              />
+                              <Center h="100%" w="100%" position="absolute">
+                                <CheckIcon fontSize="32px" color="blue.400" />
+                              </Center>
+                            </>
+                          )}
                         </Box>
-                        <Divider m="0 !important" />
-                        <LabelBox label="Bait">{fish.bait}</LabelBox>
-                        <LabelBox label="Time">{fish.time}</LabelBox>
-                        <LabelBox label="Holes">
-                          {fish.holes.map((hole) => (
-                            <Text key={hole}>{hole}</Text>
-                          ))}
-                        </LabelBox>
-                      </VStack>
-                    </PopoverContent>
-                  </Popover>
-                ))}
+                      </PopoverTrigger>
+                      <PopoverContent p="2" pointerEvents="none">
+                        <VStack
+                          alignItems="left"
+                          spacing="4"
+                          pointerEvents="none"
+                        >
+                          <Box
+                            display="flex"
+                            justifyContent="space-between"
+                            alignItems="center"
+                          >
+                            <Text fontSize="lg">{fish.name}</Text>
+                            <Text
+                              fontSize="sm"
+                              color={getRarityColor(fish.rarity)}
+                            >
+                              {fish.rarity}
+                            </Text>
+                          </Box>
+                          <Divider m="0 !important" />
+                          <LabelBox label="Bait">{fish.bait}</LabelBox>
+                          <LabelBox label="Time">{fish.time}</LabelBox>
+                          <LabelBox label="Holes">
+                            {fish.holes.map((hole) => (
+                              <Text key={hole}>{hole}</Text>
+                            ))}
+                          </LabelBox>
+                        </VStack>
+                      </PopoverContent>
+                    </Popover>
+                  ))}
               </SimpleGrid>
             </VStack>
           </Center>
