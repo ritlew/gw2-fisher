@@ -27,7 +27,10 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from '@chakra-ui/react'
-import CollectionSelect, { CollectionName } from './selects/CollectionSelect'
+import CollectionSelect, {
+  CollectionName,
+  collectionOptions,
+} from './selects/CollectionSelect'
 import BaitSelect, { Bait } from './selects/BaitSelect'
 import TimeSelect, { Time } from './selects/TimeSelect'
 import HoleSelect, { HoleName } from './selects/HoleSelect'
@@ -74,7 +77,9 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
     (showHidden) => !showHidden,
     false
   )
-  const [collections, setCollections] = useState<CollectionName[]>([])
+  const [collection, setCollection] = useState<CollectionName>(
+    collectionOptions[0]
+  )
   const [holes, setHoles] = useState<HoleName[]>([])
   const [baits, setBaits] = useState<Bait[]>([])
   const [times, setTimes] = useState<Time[]>([])
@@ -89,9 +94,14 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
       ) {
         return false
       }
+      if (collection !== fish.collection) {
+        return false
+      }
+      /*
       if (collections.length > 0 && !collections.includes(fish.collection)) {
         return false
       }
+      */
       if (
         !fish.holes.includes('Any') &&
         holes.length > 0 &&
@@ -119,10 +129,10 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
     filteredFish.sort((f1, f2) => f1.collection.localeCompare(f2.collection))
 
     setDisplayedFish(filteredFish)
-  }, [hiddenFish, showHidden, filterText, collections, holes, baits, times])
+  }, [hiddenFish, showHidden, filterText, collection, holes, baits, times])
 
   return (
-    <Box>
+    <Box display="flex" flexDir="column" height="100%">
       <VStack p="2">
         <HStack w="100%" alignItems="end">
           <FormControl w="auto" flexGrow="1">
@@ -133,12 +143,14 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
               onChange={(event) => setFilterText(event.target.value)}
             />
           </FormControl>
-          <FormControl w="auto" flexGrow="1">
-            <FormLabel mb="0">Sort (not working)</FormLabel>
-            <Select size="sm">
-              <option value="collection a-z">Collection (A-Z)</option>
-            </Select>
-          </FormControl>
+          {false && (
+            <FormControl w="auto" flexGrow="1">
+              <FormLabel mb="0">Sort (not working)</FormLabel>
+              <Select size="sm">
+                <option value="collection a-z">Collection (A-Z)</option>
+              </Select>
+            </FormControl>
+          )}
           <FormControl w="auto" flexGrow="1">
             <FormLabel mb="0">View</FormLabel>
             <Select
@@ -158,12 +170,13 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
         <Box w="100%">
           <Collapse in={open} style={{ overflow: 'unset' }}>
             <SimpleGrid columns={2} spacing={2}>
-              <CollectionSelect
+              <CollectionSelect value={collection} onChange={setCollection} />
+              <HoleSelect
                 multi
-                value={collections}
-                onChange={setCollections}
+                collection={collection}
+                value={holes}
+                onChange={setHoles}
               />
-              <HoleSelect multi value={holes} onChange={setHoles} />
               <BaitSelect multi value={baits} onChange={setBaits} />
               <TimeSelect multi value={times} onChange={setTimes} />
             </SimpleGrid>
@@ -178,113 +191,120 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
           Filters
         </Button>
       </VStack>
-      {view === 'table' && (
-        <TableContainer py={6}>
-          <Table size="sm">
-            <Thead>
-              <Tr>
-                <Th />
-                <Th>Name</Th>
-                <Th>Collection</Th>
-                <Th>Bait</Th>
-                <Th>Time</Th>
-                <Th>Holes</Th>
-                <Th align="right" />
-              </Tr>
-            </Thead>
-            <Tbody>
-              {displayedFish
-                .filter((fish) => showHidden || !hiddenFish.includes(fish.name))
-                .map((fish) => (
-                  <FishRow
+      <Box flexGrow="1" overflow="hidden">
+        {view === 'table' && (
+          <TableContainer py={6} h="100%" overflow="hidden">
+            <Table size="sm" display="block" overflow="hidden" h="100%">
+              <Thead display="table" w="100%" style={{ tableLayout: 'fixed' }}>
+                <Tr>
+                  <Th />
+                  <Th>Name</Th>
+                  <Th>Collection</Th>
+                  <Th>Bait</Th>
+                  <Th>Time</Th>
+                  <Th>Holes</Th>
+                  <Th align="right" />
+                </Tr>
+              </Thead>
+              <Tbody overflowY="auto" display="block" h="100%">
+                {displayedFish
+                  .filter(
+                    (fish) => showHidden || !hiddenFish.includes(fish.name)
+                  )
+                  .map((fish) => (
+                    <FishRow
+                      key={fish.name}
+                      fish={fish}
+                      hidden={hiddenFish.includes(fish.name)}
+                      onHide={(name) => hideFish(name)}
+                      onShow={(name) => showFish(name)}
+                    />
+                  ))}
+              </Tbody>
+            </Table>
+          </TableContainer>
+        )}
+        {view === 'collection' && (
+          <Center py="6">
+            <VStack>
+              <Text>Maguuma Collection</Text>
+              <SimpleGrid columns={7} spacing={1}>
+                {fishList.map((fish) => (
+                  <Popover
                     key={fish.name}
-                    fish={fish}
-                    hidden={hiddenFish.includes(fish.name)}
-                    onHide={(name) => hideFish(name)}
-                    onShow={(name) => showFish(name)}
-                  />
-                ))}
-            </Tbody>
-          </Table>
-        </TableContainer>
-      )}
-      {view === 'collection' && (
-        <Center py="6">
-          <VStack>
-            <Text>Maguuma Collection</Text>
-            <SimpleGrid columns={7} spacing={1}>
-              {fishList.map((fish) => (
-                <Popover
-                  key={fish.name}
-                  trigger="hover"
-                  openDelay={0}
-                  closeDelay={0}
-                >
-                  <PopoverTrigger>
-                    <Box
-                      position="relative"
-                      w="64px"
-                      h="64px"
-                      cursor="pointer"
-                      onClick={() =>
-                        hiddenFish.includes(fish.name)
-                          ? showFish(fish.name)
-                          : hideFish(fish.name)
-                      }
-                    >
-                      <Image
-                        position="absolute"
-                        border={`2px ${getRarityColor(fish.rarity, {
-                          text: true,
-                        })} solid`}
-                        borderRadius="sm"
+                    trigger="hover"
+                    openDelay={0}
+                    closeDelay={0}
+                  >
+                    <PopoverTrigger>
+                      <Box
+                        position="relative"
                         w="64px"
                         h="64px"
-                        src={`${process.env.PUBLIC_URL}/fish-images/${fish.img}`}
-                      />
-                      {hiddenFish.includes(fish.name) && (
-                        <>
-                          <Box
-                            w="64px"
-                            h="64px"
-                            bgColor="blackAlpha.800"
-                            position="absolute"
-                          />
-                          <Center h="100%" w="100%" position="absolute">
-                            <CheckIcon fontSize="32px" color="blue.400" />
-                          </Center>
-                        </>
-                      )}
-                    </Box>
-                  </PopoverTrigger>
-                  <PopoverContent p="2" pointerEvents="none">
-                    <VStack alignItems="left" spacing="4">
-                      <Box
-                        display="flex"
-                        justifyContent="space-between"
-                        alignItems="center"
+                        cursor="pointer"
+                        onClick={() =>
+                          hiddenFish.includes(fish.name)
+                            ? showFish(fish.name)
+                            : hideFish(fish.name)
+                        }
                       >
-                        <Text fontSize="lg">{fish.name}</Text>
-                        <Text fontSize="sm" color={getRarityColor(fish.rarity)}>
-                          {fish.rarity}
-                        </Text>
+                        <Image
+                          position="absolute"
+                          border={`2px ${getRarityColor(fish.rarity, {
+                            text: true,
+                          })} solid`}
+                          borderRadius="sm"
+                          w="64px"
+                          h="64px"
+                          src={`${process.env.PUBLIC_URL}/fish-images/${fish.img}`}
+                        />
+                        {hiddenFish.includes(fish.name) && (
+                          <>
+                            <Box
+                              w="64px"
+                              h="64px"
+                              bgColor="blackAlpha.800"
+                              position="absolute"
+                            />
+                            <Center h="100%" w="100%" position="absolute">
+                              <CheckIcon fontSize="32px" color="blue.400" />
+                            </Center>
+                          </>
+                        )}
                       </Box>
-                      <Divider m="0 !important" />
-                      <LabelBox label="Bait">{fish.bait}</LabelBox>
-                      <LabelBox label="Time">{fish.time}</LabelBox>
-                      <LabelBox label="Holes">
-                        {fish.holes.map((hole) => (
-                          <Text key={hole}>{hole}</Text>
-                        ))}
-                      </LabelBox>
-                    </VStack>
-                  </PopoverContent>
-                </Popover>
-              ))}
-            </SimpleGrid>
-          </VStack>
-        </Center>
-      )}
+                    </PopoverTrigger>
+                    <PopoverContent p="2" pointerEvents="none">
+                      <VStack alignItems="left" spacing="4">
+                        <Box
+                          display="flex"
+                          justifyContent="space-between"
+                          alignItems="center"
+                        >
+                          <Text fontSize="lg">{fish.name}</Text>
+                          <Text
+                            fontSize="sm"
+                            color={getRarityColor(fish.rarity)}
+                          >
+                            {fish.rarity}
+                          </Text>
+                        </Box>
+                        <Divider m="0 !important" />
+                        <LabelBox label="Bait">{fish.bait}</LabelBox>
+                        <LabelBox label="Time">{fish.time}</LabelBox>
+                        <LabelBox label="Holes">
+                          {fish.holes.map((hole) => (
+                            <Text key={hole}>{hole}</Text>
+                          ))}
+                        </LabelBox>
+                      </VStack>
+                    </PopoverContent>
+                  </Popover>
+                ))}
+              </SimpleGrid>
+            </VStack>
+          </Center>
+        )}
+      </Box>
     </Box>
   )
 }

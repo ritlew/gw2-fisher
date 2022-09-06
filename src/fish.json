@@ -1,6 +1,2433 @@
 [
   {
+    "id": 97799,
+    "name": "Alewife",
+    "rarity": "Basic",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/9A97480AF306E0049223FDF25307AF9349583090/2594428.png"
+  },
+  {
+    "id": 97364,
+    "name": "Alpine Char",
+    "rarity": "Fine",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/9B034F01F00C07ABAC1FE2D5203D092B19287A6E/2594445.png"
+  },
+  {
+    "id": 97356,
+    "name": "White Bass",
+    "rarity": "Masterwork",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/FE146C47D59049D855093DE714A3604DDBFE3D3B/2594430.png"
+  },
+  {
+    "id": 95668,
+    "name": "Sockeye",
+    "rarity": "Rare",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/F44D53070D46D5397962B0AF082A09117771C113/2594447.png"
+  },
+  {
+    "id": 95896,
+    "name": "Chain Pickerel",
+    "rarity": "Exotic",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/F644703E7CFCD8D723A41918C7DB50F06AB3A54C/2594441.png"
+  },
+  {
+    "id": 96218,
+    "name": "Cerulean Salamander",
+    "rarity": "Ascended",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Ramshorn Snails",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/77B1DA077DF56A9865502AEDBA5397380A7191A1/2594444.png"
+  },
+  {
+    "id": 96882,
+    "name": "Glacial Snakehead",
+    "rarity": "Legendary",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Shrimplings",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/E6C72358C56AC30E62ABC5351302CE191A530B16/2594448.png"
+  },
+  {
+    "id": 95766,
+    "name": "Icefish",
+    "rarity": "Basic",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/A64A919ED03F1A21CB4014B004EDAB0A2ECD58E3/2594439.png"
+  },
+  {
+    "id": 97713,
+    "name": "Grayling",
+    "rarity": "Fine",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/04F6293C0673D0AFC2C02D6944239F10A2082B01/2594438.png"
+  },
+  {
+    "id": 97866,
+    "name": "Northern Pike",
+    "rarity": "Masterwork",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/000D1D3EA4BAA5F006DBF5C801D119A3CCDAB1C8/2594440.png"
+  },
+  {
+    "id": 95822,
+    "name": "King Salmon",
+    "rarity": "Rare",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/D1ADF20AA101C23F016D512898CC082C45A40BFD/2594446.png"
+  },
+  {
+    "id": 96619,
+    "name": "Beacon's Perch",
+    "rarity": "Exotic",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Boreal Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/67B0B2955FFDE8B20B54147EE00F5AB53FA155A7/2594437.png"
+  },
+  {
+    "id": 97301,
+    "name": "Lornar's Bass",
+    "rarity": "Ascended",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Ramshorn Snails",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/F9EC30EA6C04B2E6F27F52D0F228A23CB3345C9A/2594429.png"
+  },
+  {
+    "id": 95723,
+    "name": "Alabaster Oscar",
+    "rarity": "Legendary",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Boreal Fish"
+    ],
+    "bait": "Ramshorn Snails",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/05E92B4165CA051CD038BAD83C731FC69B6107BF/2594431.png"
+  },
+  {
+    "id": 96276,
+    "name": "Snow Crab",
+    "rarity": "Basic",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/07F49943C93D2F7B0ACD647B47EE0773D517553E/2594433.png"
+  },
+  {
+    "id": 96643,
+    "name": "Walleye",
+    "rarity": "Fine",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/017460FD576ED60BAAFE1F096C4D4F2D0D711200/2594442.png"
+  },
+  {
+    "id": 97456,
+    "name": "Boreal Cod",
+    "rarity": "Masterwork",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Boreal Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/EDF56040A4B51ACD96636C2746B73A05AC3A4869/2594432.png"
+  },
+  {
+    "id": 97496,
+    "name": "Icy Lumpfish",
+    "rarity": "Rare",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Boreal Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/D0A2CF54A1B37D557F0FE0036634412222BFCD95/2594436.png"
+  },
+  {
+    "id": 96373,
+    "name": "Mystic Remora",
+    "rarity": "Exotic",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Boreal Fish"
+    ],
+    "bait": "Any",
+    "time": "Dusk/Dawn",
+    "img": "https://render.guildwars2.com/file/5532A6E1DFBB0CB4C9C3EDD457EEBD510D2F2B67/2594443.png"
+  },
+  {
+    "id": 96954,
+    "name": "Snowflake Eel",
+    "rarity": "Ascended",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Boreal Fish"
+    ],
+    "bait": "Ramshorn Snails",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/CE4D3876009BE8CD624D01210904DF92B45F00C9/2594434.png"
+  },
+  {
+    "id": 97225,
+    "name": "Halibut",
+    "rarity": "Legendary",
+    "collection": "Shiverpeaks Fisher",
+    "holes": [
+      "Boreal Fish"
+    ],
+    "bait": "Shrimplings",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/B15A35F5B81FA9497FEB6D5E1E7CA1F8501C400F/2594435.png"
+  },
+  {
+    "id": 96132,
+    "name": "Dusky Grouper",
+    "rarity": "Basic",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Dusk/Dawn",
+    "img": "https://render.guildwars2.com/file/06F8D5B26FF42A18607308785B09603E7AC97245/2594622.png"
+  },
+  {
+    "id": 97035,
+    "name": "Albino Blindfish",
+    "rarity": "Fine",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/0DF3962C28AFF44C08194C0D0F0457EA3EEF0C41/2594616.png"
+  },
+  {
+    "id": 96723,
+    "name": "Viperfish",
+    "rarity": "Masterwork",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/0F0C063B49F8BEA55406A147F65852A6E91460EC/2594629.png"
+  },
+  {
+    "id": 97770,
+    "name": "Abyssal Squid",
+    "rarity": "Rare",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/06760AD993E0EF0D572E0A2FDAD6FD45219114EA/2594632.png"
+  },
+  {
+    "id": 97470,
+    "name": "Stargazer",
+    "rarity": "Exotic",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/E69F46F9000601C6AB2A9005D7089003214D4853/2594633.png"
+  },
+  {
+    "id": 96813,
+    "name": "Blobfish",
+    "rarity": "Ascended",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Leeches",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/0E45D1E4020EBBB976DFF05E7FA0D2516B09251F/2594617.png"
+  },
+  {
+    "id": 96332,
+    "name": "Benthic Behemoth",
+    "rarity": "Legendary",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Leeches",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/BF4A73062B5B9C11D44D964BD69E6761462C56FA/2594615.png"
+  },
+  {
+    "id": 95924,
+    "name": "Ghostfish",
+    "rarity": "Basic",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/1EDE34C6DB49F5EBA8E4FCE903B56808AE3D70C3/2594621.png"
+  },
+  {
+    "id": 96055,
+    "name": "Dead Alewife",
+    "rarity": "Fine",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/966D7DB809335E732B0870E9FFDD0E5AEF66F7B3/2594613.png"
+  },
+  {
+    "id": 97556,
+    "name": "Hagfish",
+    "rarity": "Masterwork",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/5C63D043357A5D9F2F347D73E105BCD9A400B16C/2594619.png"
+  },
+  {
+    "id": 96631,
+    "name": "Spectral Jellyfish",
+    "rarity": "Rare",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/566EB75963F545FBA575BDC794E95550A6BEDF1E/2594624.png"
+  },
+  {
+    "id": 96135,
+    "name": "Orrian Anglerfish",
+    "rarity": "Exotic",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/96802A2D36EEE15E07B6986EEC7A4802E6D6B5A5/2594614.png"
+  },
+  {
+    "id": 96874,
+    "name": "Giant Octopus",
+    "rarity": "Ascended",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Sardines",
+    "time": "Dusk/Dawn",
+    "img": "https://render.guildwars2.com/file/F373064472FD9FB2D266C961B8304E385C9905AC/2594627.png"
+  },
+  {
+    "id": 96936,
+    "name": "Shipwreck Moray",
+    "rarity": "Legendary",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Sardines",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/1FAF03FB0F0EAC32F17205D57DA2D8773B24FBEF/2594620.png"
+  },
+  {
+    "id": 95873,
+    "name": "Murkwater Darter",
+    "rarity": "Basic",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/B43F6F9A036B80FAD4239CAB12F6214F26732ACB/2594618.png"
+  },
+  {
+    "id": 96666,
+    "name": "Monkfish",
+    "rarity": "Fine",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/49BBE5A30C9FD3D56CC8200EA84B240ADFB6DBC8/2594626.png"
+  },
+  {
+    "id": 96701,
+    "name": "Dhuum Fish",
+    "rarity": "Masterwork",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Leeches",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/A89CDC02DDB50D1B7DAA0E21B3091A59D0B8646A/2594628.png"
+  },
+  {
+    "id": 96551,
+    "name": "Frilled Shark",
+    "rarity": "Rare",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/5ABE36C1ECAABB0D76E5C1DC6F3B4160B29B44CC/2594631.png"
+  },
+  {
+    "id": 97302,
+    "name": "Man-of-War",
+    "rarity": "Exotic",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/A0AB07F87643C598912CEEF40DD0D9D42B13311F/2594623.png"
+  },
+  {
+    "id": 97186,
+    "name": "Risen Sea Bass",
+    "rarity": "Ascended",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Leeches",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/AB21B716E03D44749AED4D0CD0CF023F0F1DA5BF/2594630.png"
+  },
+  {
+    "id": 97017,
+    "name": "Unholy Mackerel",
+    "rarity": "Legendary",
+    "collection": "Orrian Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Leeches",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/33C833ABEF615419592009DEFDC6FC56626F0BDC/2594625.png"
+  },
+  {
+    "id": 97240,
+    "name": "Boxfish",
+    "rarity": "Basic",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/634F4A5EFED1A5CAB5A4AAD37603190EC452ED7A/2594526.png"
+  },
+  {
+    "id": 97814,
+    "name": "Canthan Carp",
+    "rarity": "Fine",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/E03F06E2FA0D156237D1D660DA80C1AB3BFDD877/2594528.png"
+  },
+  {
+    "id": 97853,
+    "name": "Jade Lamprey",
+    "rarity": "Masterwork",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "Quarry Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/A8E9BB50E8B8A408F276E11F26C606650FB1FDB1/2594530.png"
+  },
+  {
+    "id": 97183,
+    "name": "Spotted Pufferfish",
+    "rarity": "Rare",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "Quarry Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/582A2316064C4AF976CD75177CAB0A4FCAE2C9E3/2594535.png"
+  },
+  {
+    "id": 96443,
+    "name": "Giant Gourami",
+    "rarity": "Exotic",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "Quarry Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/71F36939352147651829E64BAD1A5B289D02140F/2594531.png"
+  },
+  {
+    "id": 96181,
+    "name": "Jade Sea Turtle",
+    "rarity": "Ascended",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "Quarry Fish"
+    ],
+    "bait": "Nightcrawlers",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/4A42AFA85DF5B67094F43BFDB6A1F12F454F9329/2594539.png"
+  },
+  {
+    "id": 96817,
+    "name": "Cuttlefish",
+    "rarity": "Legendary",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "Quarry Fish"
+    ],
+    "bait": "Shrimplings",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/A14CE3D36ECDE9D3067544674ED0B0C0A1907F53/2594538.png"
+  },
+  {
+    "id": 96913,
+    "name": "Rohu",
+    "rarity": "Basic",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/9B6BC2D2DA0F927DF295103CF01306A5C2EF6D67/2594527.png"
+  },
+  {
+    "id": 95729,
+    "name": "Gourami",
+    "rarity": "Fine",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/03071406FCDD36A0CBCE6EF67FFE5E749E53C261/2594532.png"
+  },
+  {
+    "id": 95670,
+    "name": "Toadfish",
+    "rarity": "Masterwork",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "Cavern Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/34B0D00D6EF1A7B2D5377C79C6B4174859384710/2594533.png"
+  },
+  {
+    "id": 96076,
+    "name": "Sheatfish",
+    "rarity": "Rare",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "Cavern Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/A239FEC7BAC844B4445E5CDA275E5D0D2C4577E4/2594529.png"
+  },
+  {
+    "id": 97794,
+    "name": "Unicorn Fish",
+    "rarity": "Exotic",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "Cavern Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/BBD2D052C5BFBA13CAAD0C4E980AB922D8B1911D/2594534.png"
+  },
+  {
+    "id": 95699,
+    "name": "Axolotl",
+    "rarity": "Ascended",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "Cavern Fish"
+    ],
+    "bait": "Nightcrawlers",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/1A6038754F9979A3D95CA13B537BB0C0EC5BC077/2594536.png"
+  },
+  {
+    "id": 95632,
+    "name": "Chambered Nautilus",
+    "rarity": "Legendary",
+    "collection": "Dragon's End Fisher",
+    "holes": [
+      "Cavern Fish"
+    ],
+    "bait": "Shrimplings",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/49DDE828275DD505E14D5031003D58662409AA1C/2594537.png"
+  },
+  {
+    "id": 96445,
+    "name": "Elonian Bass",
+    "rarity": "Basic",
+    "collection": "Desert Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/08CB0CC29341B919EE213694D1A73D9F3A5A2405/2594479.png"
+  },
+  {
+    "id": 96367,
+    "name": "Elon Tetra",
+    "rarity": "Fine",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/DF36C851BEFEC371D5EC4999BE5CAC0F3478E1FB/2594480.png"
+  },
+  {
+    "id": 97744,
+    "name": "Barramundi",
+    "rarity": "Masterwork",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/57D70EFA750641026149BF49702A91EE3B3AC808/2594478.png"
+  },
+  {
+    "id": 97848,
+    "name": "Giant Barb",
+    "rarity": "Rare",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/93C7DEA4F8BF04479322D89E4ECF569FCF695902/2594481.png"
+  },
+  {
+    "id": 96769,
+    "name": "Gilded Loach",
+    "rarity": "Exotic",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/4B0543155246DC680A0A3E75A4E7F5DAB6DDE810/2594487.png"
+  },
+  {
+    "id": 96724,
+    "name": "Marbled Lungfish",
+    "rarity": "Ascended",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Scorpions",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/DF271B7709EE0E43CEF170FE0704CDE2C561C0F1/2594489.png"
+  },
+  {
+    "id": 97466,
+    "name": "Giant Paddlefish",
+    "rarity": "Legendary",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/C97AFBA377415D5DB16560B6C8D52746947B9A24/2594493.png"
+  },
+  {
+    "id": 96349,
+    "name": "Mahseer",
+    "rarity": "Basic",
+    "collection": "Desert Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/1F2A03CC7F0248A86A0B27552ED0D64CF0A3C4DD/2594482.png"
+  },
+  {
+    "id": 96308,
+    "name": "Lungfish",
+    "rarity": "Fine",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/F51C5DBFA7E20C3AA32630D5F99B06B6D44D61CE/2594488.png"
+  },
+  {
+    "id": 96676,
+    "name": "Red-Eyed Piranha",
+    "rarity": "Masterwork",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/DF17C4A05B0AC23E67CA7807661FC59048554EA9/2594496.png"
+  },
+  {
+    "id": 97109,
+    "name": "Mudskipper",
+    "rarity": "Rare",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/4CFFD7E21641A43BDB322E0B48AA0BFFEB1AEB3C/2594490.png"
+  },
+  {
+    "id": 96428,
+    "name": "Golden Mahseer",
+    "rarity": "Exotic",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/60C61B6317E727CF5976F07A5D450C3EC70318BC/2678545.png"
+  },
+  {
+    "id": 96094,
+    "name": "Striped Catfish",
+    "rarity": "Ascended",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Scorpions",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/9CA01655DC24B603F29DD392A277430A92D031C0/2594484.png"
+  },
+  {
+    "id": 97763,
+    "name": "Kaluga",
+    "rarity": "Legendary",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Mackerel",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/55320F502570C3900C0275ACF11EC3F5F6A4FC67/2594497.png"
+  },
+  {
+    "id": 96854,
+    "name": "Tilapia",
+    "rarity": "Basic",
+    "collection": "Desert Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/DA2976C740B1075C329DA5EACCFCC34D08BB7BE2/2594486.png"
+  },
+  {
+    "id": 97755,
+    "name": "Zander",
+    "rarity": "Fine",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/B6F5A56E37509B98430CE07FBB6A2517F4C5B090/2594494.png"
+  },
+  {
+    "id": 95859,
+    "name": "Sand Carp",
+    "rarity": "Masterwork",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/F727511652C1070FBF6DC16829B2E2B163C2FC3F/2594483.png"
+  },
+  {
+    "id": 95608,
+    "name": "Paddlefish",
+    "rarity": "Rare",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/0535A5382C185B730ADD9205F7C305C14613D002/2594492.png"
+  },
+  {
+    "id": 97187,
+    "name": "Silver Bichir",
+    "rarity": "Exotic",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/CD2EB44BEF3DB0F47BAE466139E069EF18930A1A/2594491.png"
+  },
+  {
+    "id": 97145,
+    "name": "Tigerfish",
+    "rarity": "Ascended",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Mackerel",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/7F24BAA15A056430987D63781E450E94796B0299/2594495.png"
+  },
+  {
+    "id": 95929,
+    "name": "Vundu",
+    "rarity": "Legendary",
+    "collection": "Desert Fisher",
+    "holes": [
+      "Desert Fish"
+    ],
+    "bait": "Scorpions",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/56F5DA049B6FB09409F133012761CFC3C8002D17/2594485.png"
+  },
+  {
+    "id": 97612,
+    "name": "Flying Fish",
+    "rarity": "Basic",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/7D9BF1616663A497A85FCCE2520D122E9D01AC1E/2594575.png"
+  },
+  {
+    "id": 96933,
+    "name": "Blowfish",
+    "rarity": "Fine",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/BB3993DB54EE19D7F41A1FDD60766CED69437640/2594583.png"
+  },
+  {
+    "id": 97772,
+    "name": "Emerald Snapper",
+    "rarity": "Masterwork",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/11BA9A6620D478D5BC0E975BA5372E66B4DDF057/2594585.png"
+  },
+  {
+    "id": 96053,
+    "name": "Amberjack",
+    "rarity": "Rare",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/C3A42CA2DE0F724EAD451BF93B4A06690F50B57C/2594578.png"
+  },
+  {
+    "id": 95951,
+    "name": "Blue Dorado",
+    "rarity": "Exotic",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/6400F52FFA0F660124910A7537E17EB5D90C1AC4/2594590.png"
+  },
+  {
+    "id": 97463,
+    "name": "Giant Trevally",
+    "rarity": "Ascended",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Sardines",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/746CAEAEE8D6050A700F13CAE89825B53EF177D6/2594577.png"
+  },
+  {
+    "id": 96401,
+    "name": "Bluefin Tuna",
+    "rarity": "Legendary",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Mackerel",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/F5500EEC3A05C4CD2A0DC17B04915CF670CA11AA/2594591.png"
+  },
+  {
+    "id": 96876,
+    "name": "Pollock",
+    "rarity": "Basic",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/7C7796347804D794BED24177391D2E69EF01C908/2594572.png"
+  },
+  {
+    "id": 95797,
+    "name": "Emperor Fish",
+    "rarity": "Fine",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/F390BFD29995D2700CD40CA3E8DBD7B2D82B11DE/2594580.png"
+  },
+  {
+    "id": 97507,
+    "name": "Kahawai",
+    "rarity": "Masterwork",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/D64B345F1095F1DEFE35750BF32B7720BC47186D/2594576.png"
+  },
+  {
+    "id": 97830,
+    "name": "Pufferfish",
+    "rarity": "Rare",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/044034A06C0C0763DA33DC69DDD72155950F695E/2594582.png"
+  },
+  {
+    "id": 96344,
+    "name": "Sturgeon",
+    "rarity": "Exotic",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Channel Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/01D9ED0A6026D0A71AE860C1659670E43607E5BC/2594587.png"
+  },
+  {
+    "id": 97857,
+    "name": "Tarpon",
+    "rarity": "Ascended",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Shrimplings",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/95DC40A8B403BB283D68041DDA09BD4926DDD460/2594589.png"
+  },
+  {
+    "id": 97654,
+    "name": "Swordfish",
+    "rarity": "Legendary",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Mackerel",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/BE060EE1B1CB772578F3C4BA531F387DDDE7A32C/2594588.png"
+  },
+  {
+    "id": 95633,
+    "name": "Sea Perch",
+    "rarity": "Basic",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/CB349306F2032B0835DFCB701D66601D2B600C09/2594581.png"
+  },
+  {
+    "id": 96839,
+    "name": "Weever",
+    "rarity": "Fine",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/BB48E8619BEB4CA54B21059E53BD9DB50AB99153/2594586.png"
+  },
+  {
+    "id": 96145,
+    "name": "Striped Barracuda",
+    "rarity": "Masterwork",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Channel Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/CC797DE993089DF849A156DA6D4F4F0403A01C25/2594571.png"
+  },
+  {
+    "id": 97792,
+    "name": "Dragonfish",
+    "rarity": "Rare",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Channel Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/18DE11C51C36477FEB4EE6BCB1457DD6081B3B99/2594573.png"
+  },
+  {
+    "id": 96238,
+    "name": "Taimen",
+    "rarity": "Exotic",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Channel Fish"
+    ],
+    "bait": "Any",
+    "time": "Dusk/Dawn",
+    "img": "https://render.guildwars2.com/file/F75DA205B8FDADFAF2D4430A09D26329704490AA/2594584.png"
+  },
+  {
+    "id": 96863,
+    "name": "Starry Flounder",
+    "rarity": "Ascended",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Channel Fish"
+    ],
+    "bait": "Sardines",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/A9410EC503B5F42D0F0D2975D4CAAD5DC8DC750C/2594574.png"
+  },
+  {
+    "id": 96196,
+    "name": "Oarfish",
+    "rarity": "Legendary",
+    "collection": "Kaineng Fisher",
+    "holes": [
+      "Channel Fish"
+    ],
+    "bait": "Shrimplings",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/E8F547935A9AA96F0BA827B4ADC6BF3A2AA0736E/2594579.png"
+  },
+  {
+    "id": 96297,
+    "name": "Bitterling",
+    "rarity": "Basic",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/277EC304270C01CEC14C91F904A2D7969D5735AC/2594595.png"
+  },
+  {
+    "id": 97885,
+    "name": "Bluegill",
+    "rarity": "Fine",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/C4F8B9080CC111601EF00F46BE5170780012560C/2594603.png"
+  },
+  {
+    "id": 97074,
+    "name": "Rock Bass",
+    "rarity": "Masterwork",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/31BFFAE77246A2D53FA9A05131907B94501D0812/2594593.png"
+  },
+  {
+    "id": 95875,
+    "name": "Largemouth Bass",
+    "rarity": "Rare",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/0BB3C0EB5BE1B77773F6E0E1B36356D5F03E5597/2594592.png"
+  },
+  {
+    "id": 96985,
+    "name": "Golden Trout",
+    "rarity": "Exotic",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Fish Eggs",
+    "time": "Dusk/Dawn",
+    "img": "https://render.guildwars2.com/file/699D0F0304AC7199153775E8D7C56E504628309A/2594611.png"
+  },
+  {
+    "id": 96105,
+    "name": "Gar",
+    "rarity": "Ascended",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Minnows",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/4FC20D6603F67DE1A15E50E97059F24401EDF904/2594607.png"
+  },
+  {
+    "id": 95609,
+    "name": "Muskellunge",
+    "rarity": "Legendary",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Minnows",
+    "time": "Dusk/Dawn",
+    "img": "https://render.guildwars2.com/file/03D8BAAD7AA80C0961B8947FDB0D73070C99322D/2594608.png"
+  },
+  {
+    "id": 97584,
+    "name": "Bream",
+    "rarity": "Basic",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/BDD70C3FD80162D9A75AB869000BE7920FDC796A/2594604.png"
+  },
+  {
+    "id": 96176,
+    "name": "Brook Trout",
+    "rarity": "Fine",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Fish Eggs",
+    "time": "Dusk/Dawn",
+    "img": "https://render.guildwars2.com/file/D41E3602BCBA469E0AF55EF47B624D191537A70F/2594609.png"
+  },
+  {
+    "id": 96942,
+    "name": "Catfish",
+    "rarity": "Masterwork",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/9F47B2116D5226CFE55B9EA7CCEED1C5B241A5F0/2594596.png"
+  },
+  {
+    "id": 96226,
+    "name": "Rainbow Trout",
+    "rarity": "Rare",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Fish Eggs",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/DD6912676490217EA8DC5A99B29CA7B50923C2FB/2594612.png"
+  },
+  {
+    "id": 96672,
+    "name": "Ripsaw Catfish",
+    "rarity": "Exotic",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/DE4C0124E4AF510174E83BD4075503BD52D5E9D9/2594599.png"
+  },
+  {
+    "id": 95843,
+    "name": "Giant Catfish",
+    "rarity": "Ascended",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Minnows",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/E40D01CD3D1EF9EACF44DBDCFA61BA5799E493D0/2594597.png"
+  },
+  {
+    "id": 97004,
+    "name": "Old Whiskers",
+    "rarity": "Legendary",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Minnows",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/7D75F71AFBAE671F62480B7331AB80E7060C3F29/2594598.png"
+  },
+  {
+    "id": 96532,
+    "name": "Cutthroat Trout",
+    "rarity": "Basic",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Fish Eggs",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/E5496C307DBA364980AEF7E520FE72D2175368A3/2594610.png"
+  },
+  {
+    "id": 97121,
+    "name": "Smallmouth Bass",
+    "rarity": "Fine",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/335DCB2F7000711E5F2700A8074902C67A9827E5/2594594.png"
+  },
+  {
+    "id": 96931,
+    "name": "Black Crappie",
+    "rarity": "Masterwork",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Noxious Water Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/B4FACFC496BEB90700CACB752F67D0E79994017D/2594602.png"
+  },
+  {
+    "id": 97887,
+    "name": "Yellow Perch",
+    "rarity": "Rare",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Noxious Water Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/42485FA3033A4B63245BC5DAB66B91049FA4FF0E/2594606.png"
+  },
+  {
+    "id": 97479,
+    "name": "Warmouth",
+    "rarity": "Exotic",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Noxious Water Fish"
+    ],
+    "bait": "Lightning Bugs",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/D0970FC29A7EA2A11F0AA6C6B9C2576E66A90D6C/2594605.png"
+  },
+  {
+    "id": 97163,
+    "name": "Aquatic Frog",
+    "rarity": "Ascended",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Noxious Water Fish"
+    ],
+    "bait": "Lightning Bugs",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/3B1859475977E965F9069194029814802123EE73/2594601.png"
+  },
+  {
+    "id": 96081,
+    "name": "Branded Eel",
+    "rarity": "Legendary",
+    "collection": "Ascalonian Fisher",
+    "holes": [
+      "Noxious Water Fish"
+    ],
+    "bait": "Lightning Bugs",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/91227EAD9B90B7BFF1FCD10A7E1F979A788019CF/2594600.png"
+  },
+  {
+    "id": 96547,
+    "name": "Volcanic Blackfish",
+    "rarity": "Basic",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/7ABD90BC02D32BDE39779E4ECCCBDFC8D41462E1/2594684.png"
+  },
+  {
+    "id": 96720,
+    "name": "Flayfin",
+    "rarity": "Fine",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "Volcanic Fish",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/B96852A7EE0452212B1FDB5FF92301BFB03B1DFB/2594687.png"
+  },
+  {
+    "id": 96589,
+    "name": "Garnet Ram",
+    "rarity": "Masterwork",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "Volcanic Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/6458143840570AA77E9798AE6FA06AC2E0BACE6C/2594685.png"
+  },
+  {
+    "id": 96283,
+    "name": "Fire Eel",
+    "rarity": "Rare",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "Volcanic Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/5C686558C26A1040D40CC9EA0E05093C73E32ED3/2594683.png"
+  },
+  {
+    "id": 97471,
+    "name": "Glowing Coalfish",
+    "rarity": "Exotic",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "Volcanic Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/54090FA3A3AA1670FC04D3421995D1690EF7F3F3/2594682.png"
+  },
+  {
+    "id": 96530,
+    "name": "Magma Ray",
+    "rarity": "Ascended",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "Volcanic Fish"
+    ],
+    "bait": "Lava Beetles",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/CB0C9F753C9E006BFC535E40E35F592E1A903428/2594690.png"
+  },
+  {
+    "id": 96595,
+    "name": "Stone Guiyu",
+    "rarity": "Legendary",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "Volcanic Fish"
+    ],
+    "bait": "Lava Beetles",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/37D51ED69ABACA941D7FB5010D7C0F760880B13E/2594678.png"
+  },
+  {
+    "id": 96491,
+    "name": "Firemouth",
+    "rarity": "Basic",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/387EFB0C7AE4EF2AA4F8DB1B75481D670D53401C/2594686.png"
+  },
+  {
+    "id": 96597,
+    "name": "Igneous Rockfish",
+    "rarity": "Fine",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "Coastal Fish",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/0EB99FF1019B1351F8E567B93A6097F1B5337356/2594688.png"
+  },
+  {
+    "id": 96889,
+    "name": "Redtail Catfish",
+    "rarity": "Masterwork",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/6F0EB34EEB69DEBCC31E6B04B52FB41CC003514B/2594681.png"
+  },
+  {
+    "id": 96555,
+    "name": "Geyser Batfin",
+    "rarity": "Rare",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/B9E08066659DBDA3D80B2D4E27533D17034767ED/2594680.png"
+  },
+  {
+    "id": 97100,
+    "name": "Flamefin Betta",
+    "rarity": "Exotic",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/945BED76CA3845D2D5315ED67369B319D903F9B8/2594679.png"
+  },
+  {
+    "id": 97498,
+    "name": "Scorpion Fish",
+    "rarity": "Ascended",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Lava Beetles",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/F7066703DC61CBEC185440AC429A1C239A7846CA/2594689.png"
+  },
+  {
+    "id": 96361,
+    "name": "Dunkleosteus",
+    "rarity": "Legendary",
+    "collection": "Ring of Fire Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Lava Beetles",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/FDAFE721B54EA9C7721F9245ED1992B53F6AB3F0/2594677.png"
+  },
+  {
+    "id": 96852,
+    "name": "Goldfish",
+    "rarity": "Junk",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/6FFE55C0771CE4CD28E8CD9B979526AA156B9435/2594449.png"
+  },
+  {
+    "id": 96635,
+    "name": "Armored Scalefish",
+    "rarity": "Rare",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/5ED25ACF24509B4BFDBD5CF6A86F0D6E53C3E678/2594459.png"
+  },
+  {
+    "id": 95992,
+    "name": "Bloodfish",
+    "rarity": "Rare",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/3915B0520A60E49BE5D70E55AE737954FCAF4A7E/2594461.png"
+  },
+  {
+    "id": 96804,
+    "name": "Bonefish",
+    "rarity": "Rare",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/FA06B519BDFA23E6BD9EB419B1F60FBE0B0FEC5A/2594462.png"
+  },
+  {
+    "id": 96108,
+    "name": "Clawfish",
+    "rarity": "Rare",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/57A2AB72080E91A6780C95940AC6C25AD74196B9/2594463.png"
+  },
+  {
+    "id": 96304,
+    "name": "Dustfish",
+    "rarity": "Rare",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/A4EE284464B64D5368F57703280FE0EDB5911C67/2594464.png"
+  },
+  {
+    "id": 97097,
+    "name": "Sunscale Striker",
+    "rarity": "Exotic",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/C74237083E4571C93B05C0B32105C09921C70057/2594477.png"
+  },
+  {
+    "id": 97388,
+    "name": "Silverfish",
+    "rarity": "Junk",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/6D0E49BF0679794FAA3495D1222E2D6F69C5C821/2594451.png"
+  },
+  {
+    "id": 96116,
+    "name": "Red Herring",
+    "rarity": "Junk",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/419F5A47F6D69D0FD8693319A10FB8C57B234234/2594458.png"
+  },
+  {
+    "id": 95624,
+    "name": "Fangfish",
+    "rarity": "Rare",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/A9761529769046E8B06BE699DAC0932E5AC3C60E/2594465.png"
+  },
+  {
+    "id": 95682,
+    "name": "Totemfish",
+    "rarity": "Rare",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/D1D1E5211A12A347DF572931BEC3B1C0DAA9CD15/2594466.png"
+  },
+  {
+    "id": 96141,
+    "name": "Venomfish",
+    "rarity": "Rare",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/CD70C0C570411A2DC9C5CB0CB20C30CF0CC9E743/2594467.png"
+  },
+  {
+    "id": 97497,
+    "name": "Twilight Striker",
+    "rarity": "Exotic",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any"
+    ],
+    "bait": "Any",
+    "time": "Dusk/Dawn",
+    "img": "https://render.guildwars2.com/file/7358D8027FA74A74F635A267D90621B96290C51C/2594454.png"
+  },
+  {
+    "id": 95870,
+    "name": "Moonfin Striker",
+    "rarity": "Exotic",
+    "collection": "World Class Fisher",
+    "holes": [
+      "Any"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/A502147F935C93A0C2F92E1A97CFB607CC4B16DB/2594476.png"
+  },
+  {
+    "id": 97369,
+    "name": "Sea Trout",
+    "rarity": "Basic",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/3C99F40E65612FC47EEF3618B3A74B9B4428A89B/2594510.png"
+  },
+  {
+    "id": 96085,
+    "name": "Cobia",
+    "rarity": "Fine",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/4930F2F5EA6D93ADF452FB77A900944549626A19/2594501.png"
+  },
+  {
+    "id": 95794,
+    "name": "Diamond Trevally",
+    "rarity": "Masterwork",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/EFD57BAAE10A0F679FB90431DC3ED07A05A277C7/2594502.png"
+  },
+  {
+    "id": 97756,
+    "name": "Yellowtail Snapper",
+    "rarity": "Rare",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/F09A0D0376B4D64E0A511C4B4B31F0072806D0B0/2594507.png"
+  },
+  {
+    "id": 97746,
+    "name": "Pompano",
+    "rarity": "Exotic",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/084D5B0B516C76DEFE75CE9139DEF4E0DC1F4A45/2594500.png"
+  },
+  {
+    "id": 96513,
+    "name": "King Crab",
+    "rarity": "Ascended",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Mackerel",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/654FEA565ECE4D4BE4BC919CF62E941676F0E726/2594499.png"
+  },
+  {
+    "id": 96225,
+    "name": "Beluga",
+    "rarity": "Legendary",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Fish Eggs",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/03A54C1FFDC20CCFCE55964868E5D04E1DA6039F/2594508.png"
+  },
+  {
+    "id": 95890,
+    "name": "Sheepshead",
+    "rarity": "Basic",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/F6E84BDF43A0BE1999C0BEAFE3420D7ED70206D9/2594506.png"
+  },
+  {
+    "id": 96397,
+    "name": "Parrotfish",
+    "rarity": "Fine",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/D8A8AD21B4FB91D9D824CEFBE710F0224C5C49AD/2594505.png"
+  },
+  {
+    "id": 97844,
+    "name": "Roosterfish",
+    "rarity": "Masterwork",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/119639EE1D680B9641930B58914A5F50A69243BB/2594503.png"
+  },
+  {
+    "id": 97001,
+    "name": "Opah",
+    "rarity": "Rare",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/220E240CB9C1A8530F025170143F48077BD8CB27/2594504.png"
+  },
+  {
+    "id": 97443,
+    "name": "Wahoo",
+    "rarity": "Exotic",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Dusk/Dawn",
+    "img": "https://render.guildwars2.com/file/9F292A0B7BB30E940415350A1B19737EC89C3B0F/2594511.png"
+  },
+  {
+    "id": 95849,
+    "name": "Blue Marlin",
+    "rarity": "Ascended",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Mackerel",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/08B82AE672DBE00E7AFB045C2F6856A7AE7CD5A1/2594509.png"
+  },
+  {
+    "id": 97489,
+    "name": "Dandan",
+    "rarity": "Legendary",
+    "collection": "Desert Isles Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Fish Eggs",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/56DEC0FE2C48CD5EEF100D49390A42FD4CCA0696/2594498.png"
+  },
+  {
+    "id": 95654,
+    "name": "Seahorse",
+    "rarity": "Rare",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/7C020572A84098BDAA49A897B0C1D208EA00C6EB/2594470.png"
+  },
+  {
+    "id": 96632,
+    "name": "Leafy Sea Dragon",
+    "rarity": "Rare",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/337FBF18295139074D7C27B7AAAC96A84F76E935/2594471.png"
+  },
+  {
+    "id": 96082,
+    "name": "Mantis Shrimp",
+    "rarity": "Rare",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/0AB1E8C3D2A7AD18B2DB6AB195DDA5DF23647E4C/2594472.png"
+  },
+  {
+    "id": 97247,
+    "name": "Electric Eel",
+    "rarity": "Rare",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/05E1D699BBAA045692BB069000E8FFF4E845E1A4/2594453.png"
+  },
+  {
+    "id": 97241,
+    "name": "Rockfish",
+    "rarity": "Rare",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/DF46D09F3AD5DAAE520DCD0600AD77110F30D6A9/2594469.png"
+  },
+  {
+    "id": 97596,
+    "name": "Horseshoe Crab",
+    "rarity": "Exotic",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/543E267B0A1B78CBB40FB2250980565A2EF77CEA/2594452.png"
+  },
+  {
+    "id": 95600,
+    "name": "Sea Robin",
+    "rarity": "Exotic",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/1B01DF6276141B226B6F065015E534054061D4AB/2594456.png"
+  },
+  {
+    "id": 96097,
+    "name": "Redfin Barb",
+    "rarity": "Rare",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/2F04A45FA52CB4221B4BA22C173035ED08C2DC6D/2594460.png"
+  },
+  {
+    "id": 96265,
+    "name": "Googly-Eyed Squid",
+    "rarity": "Rare",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/3BBF4EDA6BBF0FEC7513BE0E3B7546F20198FF2C/2594473.png"
+  },
+  {
+    "id": 96110,
+    "name": "Shimmering Squid",
+    "rarity": "Rare",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/C23ADBDBAB666FAD02FAB706FFECE20C02310FC1/2594474.png"
+  },
+  {
+    "id": 97340,
+    "name": "Vampire Squid",
+    "rarity": "Rare",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/E229DCFCB231394802DC552B3F6EF31AB47456BE/2594475.png"
+  },
+  {
+    "id": 95793,
+    "name": "Flapjack Octopus",
+    "rarity": "Rare",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/3AC10AB432C21D07DC121B2D6E77152F6EEE7539/2594468.png"
+  },
+  {
+    "id": 95968,
+    "name": "Aurelian Herring",
+    "rarity": "Exotic",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/0E4D6F77AA5AFE1036A6723C0553F33017290342/2594457.png"
+  },
+  {
+    "id": 97534,
+    "name": "Red Gurnard",
+    "rarity": "Exotic",
+    "collection": "Saltwater Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/2703CE104FC2A5BE926DFC54113673BA561E4105/2594455.png"
+  },
+  {
+    "id": 95961,
+    "name": "Krytan Crawfish",
+    "rarity": "Basic",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/E2AC72E2C0A443E2CE69C29893A5F8DDD3C49C7C/2594661.png"
+  },
+  {
+    "id": 96032,
+    "name": "Delavan Guppy",
+    "rarity": "Fine",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/0D77693DC3E559BA7903BBA700BDC8C921ED00A8/2594666.png"
+  },
+  {
+    "id": 96192,
+    "name": "Steelhead Trout",
+    "rarity": "Masterwork",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "River Fish"
+    ],
+    "bait": "Fish Eggs",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/F32B7DEC09D27A98ACCA70E5606C2054B35CB21A/2594676.png"
+  },
+  {
+    "id": 97787,
+    "name": "Croaker",
+    "rarity": "Rare",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "River Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/4F71FF731D29D1A680FFE620AB982EC003636062/2594675.png"
+  },
+  {
+    "id": 95819,
+    "name": "Divinity Angelfin",
+    "rarity": "Exotic",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "River Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/680A2656C00408A8929C28EE0B164845FD43C10E/2594656.png"
+  },
+  {
+    "id": 95731,
+    "name": "Queenfish",
+    "rarity": "Ascended",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "River Fish"
+    ],
+    "bait": "Minnows",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/04A505747002D4CDDC5CD504DDBB2433320D5FF4/2594670.png"
+  },
+  {
+    "id": 96543,
+    "name": "Mud Skate",
+    "rarity": "Legendary",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "River Fish"
+    ],
+    "bait": "Minnows",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/25CCB4E34058FC9F15EBB2AECD22CF0C64FBD3BE/2594659.png"
+  },
+  {
+    "id": 97462,
+    "name": "Speckled Perch",
+    "rarity": "Basic",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/4DBB101EFF7D0AA2082C99AFA8A9E217F8AA7DFB/2594671.png"
+  },
+  {
+    "id": 96740,
+    "name": "Round Goby",
+    "rarity": "Fine",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/0ACF47226C3A26DF241EF20726F52B79A825CBEA/2594665.png"
+  },
+  {
+    "id": 97341,
+    "name": "Striped Bass",
+    "rarity": "Masterwork",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/DE6E5E52F555B2B8619B04FBD0D7317E93169CCE/2594658.png"
+  },
+  {
+    "id": 97509,
+    "name": "Black Bass",
+    "rarity": "Rare",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/9132059FA372F0FA0FFE67751E36A4DCCCE43AE4/2594657.png"
+  },
+  {
+    "id": 97103,
+    "name": "Quagmire Eel",
+    "rarity": "Exotic",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/596DAD71FA026A372178E2F05D30C068C5070165/2594662.png"
+  },
+  {
+    "id": 96571,
+    "name": "Royal Pike",
+    "rarity": "Ascended",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Minnows",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/437BBF0D39BAC7B1180ED3AD0F061796D4FB0FEC/2594673.png"
+  },
+  {
+    "id": 97485,
+    "name": "Slaughterfish",
+    "rarity": "Legendary",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Minnows",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/954E4B5563C17E350EBF9FB468A15FB9610E114B/2594672.png"
+  },
+  {
+    "id": 96001,
+    "name": "Spotted Flounder",
+    "rarity": "Basic",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/E5616F0304D6647D9A019E22053A02F3E6D57053/2594664.png"
+  },
+  {
+    "id": 95881,
+    "name": "Sailfin Molly",
+    "rarity": "Fine",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/610E6B27BF536834756A62DCC157BA9A5663047B/2594660.png"
+  },
+  {
+    "id": 97785,
+    "name": "Swampblight Lamprey",
+    "rarity": "Masterwork",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/0D2E2569A94C2BAF4B4FB97ED46774307FE6C17C/2594663.png"
+  },
+  {
+    "id": 97005,
+    "name": "Silver Moony",
+    "rarity": "Rare",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/563E2D0613B4A508032D006542DD10D54701D272/2594669.png"
+  },
+  {
+    "id": 96667,
+    "name": "Krytan Puffer",
+    "rarity": "Exotic",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/FEA17732FC7FE53AEDFC7A08069B6EC99BE49BF6/2594674.png"
+  },
+  {
+    "id": 97409,
+    "name": "Holy Mackerel",
+    "rarity": "Ascended",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Shrimplings",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/F8093A684EBF0CA99DB707CF4FA8EB41FF0FD1DB/2594668.png"
+  },
+  {
+    "id": 97527,
+    "name": "Black Lionfish",
+    "rarity": "Legendary",
+    "collection": "Krytan Fisher",
+    "holes": [
+      "Coastal Fish"
+    ],
+    "bait": "Shrimplings",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/E7209BB9A4FB3056A498199FE5A341F55361AC4B/2594667.png"
+  },
+  {
+    "id": 96020,
     "name": "Brackish Goby",
+    "rarity": "Basic",
     "collection": "Maguuma Fisher",
     "holes": [
       "None",
@@ -8,11 +2435,12 @@
     ],
     "bait": "Any",
     "time": "Nighttime",
-    "rarity": "Basic",
-    "img": "brackish-goby.png"
+    "img": "https://render.guildwars2.com/file/934B391C3FA45BA83A6B58F1C55D37FC0DE8BA2E/2594696.png"
   },
   {
+    "id": 97568,
     "name": "Oscar",
+    "rarity": "Fine",
     "collection": "Maguuma Fisher",
     "holes": [
       "Any",
@@ -20,66 +2448,72 @@
     ],
     "bait": "Any",
     "time": "Any",
-    "rarity": "Common",
-    "img": "oscar.png"
+    "img": "https://render.guildwars2.com/file/FF4AA02772C4974AEA38701199476A04EDF23201/2594700.png"
   },
   {
+    "id": 96325,
     "name": "Bicuda",
+    "rarity": "Masterwork",
     "collection": "Maguuma Fisher",
     "holes": [
       "Freshwater Fish"
     ],
     "bait": "Any",
     "time": "Any",
-    "rarity": "Masterwork",
-    "img": "bicuda.png"
+    "img": "https://render.guildwars2.com/file/A5D79CE9ACA1613AC24003C28099EC0E21F7D598/2594703.png"
   },
   {
+    "id": 96320,
     "name": "Pacu",
+    "rarity": "Rare",
     "collection": "Maguuma Fisher",
     "holes": [
       "Freshwater Fish"
     ],
     "bait": "Any",
     "time": "Any",
-    "rarity": "Rare",
-    "img": "pacu.png"
+    "img": "https://render.guildwars2.com/file/E1FDFE9C1332F5163875FE18392FFAA24775C90F/2594704.png"
   },
   {
+    "id": 97057,
     "name": "Arowana",
+    "rarity": "Exotic",
     "collection": "Maguuma Fisher",
     "holes": [
       "Freshwater Fish"
     ],
     "bait": "Any",
     "time": "Daytime",
-    "rarity": "Exotic",
-    "img": "arowana.png"
+    "img": "https://render.guildwars2.com/file/E20AFE6F0E4CBF5A06295398926F2E6E2DA736C4/2594692.png"
   },
   {
+    "id": 96692,
     "name": "Golden Dorado",
+    "rarity": "Ascended",
     "collection": "Maguuma Fisher",
     "holes": [
       "Freshwater Fish"
     ],
-    "bait": "Sparkfly Larvae",
+    "bait": "Sparkfly Larva",
     "time": "Daytime",
-    "rarity": "Ascended",
-    "img": "golden-dorado.png"
+    "img": "https://render.guildwars2.com/file/50750AC2C23EC7FDB0C4BF29016F690253D691EA/2594710.png"
   },
   {
+    "id": 97078,
     "name": "Arapaima",
+    "rarity": "Legendary",
     "collection": "Maguuma Fisher",
     "holes": [
       "Freshwater Fish"
     ],
-    "bait": "Sparkfly Larvae",
+    "bait": "Sparkfly Larva",
     "time": "Daytime",
-    "rarity": "Legendary",
-    "img": "arapaima.png"
+    "img": "https://render.guildwars2.com/file/7917FDE2229C675B9BA8A0421B312103AA930D9E/2594702.png"
   },
   {
+    "id": 96201,
     "name": "Piranha",
+    "rarity": "Basic",
     "collection": "Maguuma Fisher",
     "holes": [
       "None",
@@ -87,11 +2521,12 @@
     ],
     "bait": "Any",
     "time": "Daytime",
-    "rarity": "Basic",
-    "img": "piranha.png"
+    "img": "https://render.guildwars2.com/file/BCCE0A030F744061FEBBE4AB5998763EECA9B3B8/2594705.png"
   },
   {
+    "id": 95751,
     "name": "Silver Drum",
+    "rarity": "Fine",
     "collection": "Maguuma Fisher",
     "holes": [
       "Any",
@@ -99,66 +2534,72 @@
     ],
     "bait": "Any",
     "time": "Any",
-    "rarity": "Common",
-    "img": "silver-drum.png"
+    "img": "https://render.guildwars2.com/file/9A3D0BC69197E1B56F373AC6427D1DEC21F44DFD/2594701.png"
   },
   {
+    "id": 96191,
     "name": "Payara",
-    "collection": "Maguuma Fisher",
-    "holes": [
-      "Freshwater Fish"
-    ],
-    "bait": "Any",
-    "time": "Any",
     "rarity": "Masterwork",
-    "img": "payara.png"
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Freshwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/7B31BFF87A0609A8DA6A4829E703EC3E17FF1C6A/2594708.png"
   },
   {
+    "id": 97841,
     "name": "Peacock Bass",
-    "collection": "Maguuma Fisher",
-    "holes": [
-      "Freshwater Fish"
-    ],
-    "bait": "Any",
-    "time": "Any",
     "rarity": "Rare",
-    "img": "peacock-bass.png"
-  },
-  {
-    "name": "Sardinata",
     "collection": "Maguuma Fisher",
     "holes": [
       "Freshwater Fish"
     ],
     "bait": "Any",
     "time": "Any",
-    "rarity": "Exotic",
-    "img": "sardinata.png"
+    "img": "https://render.guildwars2.com/file/0AAECE70422600C5E0F3D2EFCD3D042BAE989A04/2594691.png"
   },
   {
-    "name": "Jundia",
+    "id": 97644,
+    "name": "Sardinata",
+    "rarity": "Exotic",
     "collection": "Maguuma Fisher",
     "holes": [
       "Freshwater Fish"
     ],
-    "bait": "Sparkfly Larvae",
+    "bait": "Any",
     "time": "Any",
-    "rarity": "Ascended",
-    "img": "jundia.png"
+    "img": "https://render.guildwars2.com/file/0FEC0E086363CFFF3A08FFE1052C04E177CB10D5/2594698.png"
   },
   {
+    "id": 97465,
+    "name": "Jundia",
+    "rarity": "Ascended",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Freshwater Fish"
+    ],
+    "bait": "Sparkfly Larva",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/CFB9E273063748D72BEABA3C560C3A229FF6A2B4/2594693.png"
+  },
+  {
+    "id": 95908,
     "name": "Goliath Grouper",
+    "rarity": "Legendary",
     "collection": "Maguuma Fisher",
     "holes": [
       "Saltwater Fish"
     ],
-    "bait": "Sardines",
+    "bait": "Sardine",
     "time": "Any",
-    "rarity": "Legendary",
-    "img": "goliath-grouper.png"
+    "img": "https://render.guildwars2.com/file/3FD73E4CC9709306EF0BD70E3A0A220F25FE5E3E/2594697.png"
   },
   {
+    "id": 96983,
     "name": "Snook",
+    "rarity": "Basic",
     "collection": "Maguuma Fisher",
     "holes": [
       "None",
@@ -166,11 +2607,12 @@
     ],
     "bait": "Any",
     "time": "Any",
-    "rarity": "Basic",
-    "img": "snook.png"
+    "img": "https://render.guildwars2.com/file/9237C00E9890DF323C2CCB9603DFC75C08950F67/2594706.png"
   },
   {
+    "id": 96653,
     "name": "Surubim",
+    "rarity": "Fine",
     "collection": "Maguuma Fisher",
     "holes": [
       "Any",
@@ -178,62 +2620,496 @@
     ],
     "bait": "Any",
     "time": "Any",
-    "rarity": "Common",
-    "img": "surubim.png"
+    "img": "https://render.guildwars2.com/file/C03B02034208CB92C1F710E176DF58E46B11A172/2594694.png"
   },
   {
+    "id": 97546,
     "name": "Maguuma Trout",
+    "rarity": "Masterwork",
     "collection": "Maguuma Fisher",
     "holes": [
       "Saltwater Fish"
     ],
     "bait": "Any",
     "time": "Daytime",
-    "rarity": "Masterwork",
-    "img": "maguuma-trout.png"
+    "img": "https://render.guildwars2.com/file/B53BF6A84C3C0F06B4DD7B52DB669D39D469EF7E/2594709.png"
   },
   {
+    "id": 96645,
     "name": "Wolffish",
-    "collection": "Maguuma Fisher",
-    "holes": [
-      "Saltwater Fish"
-    ],
-    "bait": "Any",
-    "time": "Any",
     "rarity": "Rare",
-    "img": "wolffish.png"
-  },
-  {
-    "name": "Maguuma Jack",
     "collection": "Maguuma Fisher",
     "holes": [
       "Saltwater Fish"
     ],
     "bait": "Any",
     "time": "Any",
-    "rarity": "Exotic",
-    "img": "maguuma-jack.png"
+    "img": "https://render.guildwars2.com/file/68A119A81C49F8545A21AFB798FA631F98EE480F/2594711.png"
   },
   {
-    "name": "Rainbow Glowfish",
+    "id": 97122,
+    "name": "Maguuma Jack",
+    "rarity": "Exotic",
     "collection": "Maguuma Fisher",
     "holes": [
       "Saltwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/2854F6CF2E05BD7CD7E2A612200A00080C6A2802/2594699.png"
+  },
+  {
+    "id": 97543,
+    "name": "Rainbow Glowfish",
+    "rarity": "Ascended",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Saltwater Fish"
+    ],
+    "bait": "Sardine",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/227E252ACCEE1BBCFD9831C531B3FAE8BB091D9F/2594695.png"
+  },
+  {
+    "id": 96439,
+    "name": "Royal Starfish",
+    "rarity": "Legendary",
+    "collection": "Maguuma Fisher",
+    "holes": [
+      "Saltwater Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/13264FCE374729903CCDF1F82217720807A92AB3/2594707.png"
+  },
+  {
+    "id": 95894,
+    "name": "Globefish",
+    "rarity": "Basic",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/A65EC1805441C475EA4EDE243E36A571F9FD47C8/2594645.png"
+  },
+  {
+    "id": 96350,
+    "name": "Bluefin Trevally",
+    "rarity": "Fine",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/D81DDD1BA20BAD7F02CC054E062E0EFE01161FB4/2594638.png"
+  },
+  {
+    "id": 97278,
+    "name": "Cherry Salmon",
+    "rarity": "Masterwork",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/71430BCCD796E46B1D0CFF534573E1229250D90D/2594648.png"
+  },
+  {
+    "id": 96425,
+    "name": "Cutlass Fish",
+    "rarity": "Rare",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/029079610501DD79C9C46BFACC6DAAF2E2DF7130/2594635.png"
+  },
+  {
+    "id": 97604,
+    "name": "Stingray",
+    "rarity": "Exotic",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/93B6B279DE4B4A3E493A5D5165FE082E18A5B353/2594646.png"
+  },
+  {
+    "id": 95603,
+    "name": "Spotted Stingray",
+    "rarity": "Ascended",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Shrimplings",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/B390F77A9FED5A9F2BA0D7540211320CD5AD0853/2594651.png"
+  },
+  {
+    "id": 97753,
+    "name": "Fugu Fish",
+    "rarity": "Legendary",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Shore Fish"
+    ],
+    "bait": "Shrimplings",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/66062E6CD322D1B36B7C004056FE377517D9C774/2594644.png"
+  },
+  {
+    "id": 97865,
+    "name": "Mullet",
+    "rarity": "Basic",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/9B1A316B0F062D55567461B567481F2B9D7F7A43/2594637.png"
+  },
+  {
+    "id": 96719,
+    "name": "Corvina",
+    "rarity": "Fine",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/030B0DACBCBB0EEB28DB03FAD0F8CB4219F7BB12/2594640.png"
+  },
+  {
+    "id": 95936,
+    "name": "Crimson Snapper",
+    "rarity": "Masterwork",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/A30933774275400D2006AAA328B16720C0411EA8/2594650.png"
+  },
+  {
+    "id": 97692,
+    "name": "Honeycomb Grouper",
+    "rarity": "Rare",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/7B6C57752A38BE082E37D0E208631B4E3AEE19D0/2594636.png"
+  },
+  {
+    "id": 97722,
+    "name": "Humphead Wrasse",
+    "rarity": "Exotic",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/AADA027C9237037ADBAE48D02E08E33AEDDD94DA/2594641.png"
+  },
+  {
+    "id": 96523,
+    "name": "Skipjack Tuna",
+    "rarity": "Ascended",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Sardines",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/2BE922EEC413EFEEA2FF01CE73E20E2E60E00DD3/2594655.png"
+  },
+  {
+    "id": 95926,
+    "name": "Sailfish",
+    "rarity": "Legendary",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Sardines",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/7FD1FC9D01F5E17D926691EDF01B92297D0C5C7F/2594653.png"
+  },
+  {
+    "id": 96757,
+    "name": "Porgy",
+    "rarity": "Basic",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/BD070B460679D42CC34A0A4A913FA8CE4DEC5CDC/2594642.png"
+  },
+  {
+    "id": 96071,
+    "name": "Chestnut Sea Bream",
+    "rarity": "Fine",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/1D5ABA44DA4BA1709C10BB913076F2937D42E9A1/2594450.png"
+  },
+  {
+    "id": 96944,
+    "name": "Green Sawfish",
+    "rarity": "Masterwork",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/43C7E066737B2D5CCE72DC5A4CD6A70F47CF90F7/2594649.png"
+  },
+  {
+    "id": 97061,
+    "name": "Tripletail",
+    "rarity": "Rare",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/EEAD24B71D073397C7DBCCD1E4236CD0AFFC6C55/2594643.png"
+  },
+  {
+    "id": 97714,
+    "name": "Dragonet",
+    "rarity": "Exotic",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Offshore Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/44FA9CFB12302295FE59F203ACF2231B303FFA0C/2594647.png"
+  },
+  {
+    "id": 96318,
+    "name": "Mega Prawn",
+    "rarity": "Ascended",
+    "collection": "Seitung Province Fisher",
+    "holes": [
+      "Offshore Fish"
     ],
     "bait": "Sardines",
     "time": "Nighttime",
-    "rarity": "Ascended",
-    "img": "rainbow-glowfish.png"
+    "img": "https://render.guildwars2.com/file/1708B60B9DCFF901BC137355F07D0A1D3659EA12/2594634.png"
   },
   {
-    "name": "Royal Starfish",
-    "collection": "Maguuma Fisher",
+    "id": 97181,
+    "name": "Sunfish",
+    "rarity": "Legendary",
+    "collection": "Seitung Province Fisher",
     "holes": [
-      "Saltwater Fish"
+      "Offshore Fish"
+    ],
+    "bait": "Shrimplings",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/20255CD0D178E6E4E0CDB0F3C995CE2FFAD73E78/2594652.png"
+  },
+  {
+    "id": 96807,
+    "name": "Freshwater Eel",
+    "rarity": "Basic",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "None",
+      "Open Water"
     ],
     "bait": "Any",
     "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/DB6C4BDD225A972D099A5E3960A7D1DA74363398/2594516.png"
+  },
+  {
+    "id": 96195,
+    "name": "Black Carp",
+    "rarity": "Fine",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/2D7B54C9AA9A12E043C008A529DA291AE558D352/2594512.png"
+  },
+  {
+    "id": 96017,
+    "name": "Bullhead Catfish",
+    "rarity": "Masterwork",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/E9F6E8F9BF1FF464CD07E6F8734AF19170300EAB/2594514.png"
+  },
+  {
+    "id": 96834,
+    "name": "Cherry Barb",
+    "rarity": "Rare",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/DA4694D134ECA3B26FDD64AD21D4546A4008F4EA/2594513.png"
+  },
+  {
+    "id": 95861,
+    "name": "Amber Trout",
+    "rarity": "Exotic",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/1763690663514202AEDFDCA01BF704560E02BCB0/2594525.png"
+  },
+  {
+    "id": 95584,
+    "name": "Royal Featherback",
+    "rarity": "Ascended",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Minnows",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/9627D3E2D4B9DAB7CD7FBFC7E72E5D2B450E9052/2594518.png"
+  },
+  {
+    "id": 97716,
+    "name": "Melandru's Lurker",
     "rarity": "Legendary",
-    "img": "royal-starfish.png"
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "Lake Fish"
+    ],
+    "bait": "Minnows",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/04696314991AEE09A57DAE56A0AEB343A244D6B7/2594515.png"
+  },
+  {
+    "id": 96096,
+    "name": "Stone Loach",
+    "rarity": "Basic",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "None",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/DD070404F917F8B3061EFF08056999E59805076B/2594520.png"
+  },
+  {
+    "id": 95596,
+    "name": "Knifefish",
+    "rarity": "Fine",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "Any",
+      "Open Water"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/74B149BAEF6DAC1BB4ED1E60A3203E2C4A013E90/2594519.png"
+  },
+  {
+    "id": 96310,
+    "name": "Snakehead",
+    "rarity": "Masterwork",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "Grotto Fish"
+    ],
+    "bait": "Any",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/4AC54CD195DC17327A6561E0E09C3A7709803F59/2594524.png"
+  },
+  {
+    "id": 96792,
+    "name": "Petrifish",
+    "rarity": "Rare",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "Grotto Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/2C03CDAF5C31A82A4CA0E571390B0DDB3B38EDA6/2594522.png"
+  },
+  {
+    "id": 97329,
+    "name": "Albino Gourami",
+    "rarity": "Exotic",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "Grotto Fish"
+    ],
+    "bait": "Any",
+    "time": "Any",
+    "img": "https://render.guildwars2.com/file/D02D91EBB400F4EB99FC4A73BD5F0A36FDC3F402/2594517.png"
+  },
+  {
+    "id": 95765,
+    "name": "Albino Axolotl",
+    "rarity": "Ascended",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "Grotto Fish"
+    ],
+    "bait": "Glow Worms",
+    "time": "Nighttime",
+    "img": "https://render.guildwars2.com/file/A3242544FA0EEE61BE0F12B5E2F35211B95E4DBA/2594523.png"
+  },
+  {
+    "id": 97559,
+    "name": "Dark Sleeper",
+    "rarity": "Legendary",
+    "collection": "Echovald Wilds Fisher",
+    "holes": [
+      "Grotto Fish"
+    ],
+    "bait": "Glow Worms",
+    "time": "Daytime",
+    "img": "https://render.guildwars2.com/file/6BB3C911D85F7F2E116A37ABE4AA49FE0CBB6804/2594521.png"
   }
 ]

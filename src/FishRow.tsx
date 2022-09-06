@@ -38,21 +38,16 @@ export const getRarityColor = (
   }
 }
 
-interface FishListItemProps {
+export interface FishRowProps {
   fish: Fish
-  hidden?: boolean
+  hidden: boolean
   onHide: (name: string) => void
   onShow: (name: string) => void
 }
 
-const FishListItem: React.FC<FishListItemProps> = ({
-  fish,
-  hidden,
-  onHide,
-  onShow,
-}) => {
+const FishRow: React.FC<FishRowProps> = ({ fish, hidden, onHide, onShow }) => {
   return (
-    <Tr>
+    <Tr display="table" w="100%" style={{ tableLayout: 'fixed' }}>
       <Td>
         {fish.img && (
           <Image
@@ -60,7 +55,7 @@ const FishListItem: React.FC<FishListItemProps> = ({
             borderRadius="sm"
             w="40px"
             h="40px"
-            src={`${process.env.PUBLIC_URL}/fish-images/${fish.img}`}
+            src={fish.img}
           />
         )}
       </Td>
@@ -107,4 +102,4 @@ const FishListItem: React.FC<FishListItemProps> = ({
   )
 }
 
-export default FishListItem
+export default FishRow

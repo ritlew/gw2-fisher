@@ -7,7 +7,22 @@ import { FormControl } from '@chakra-ui/react'
 // local
 import Select, { SelectProps } from './Select'
 
-const collectionNames = ['Maguuma Fisher'] as const
+const collectionNames = [
+  'Shiverpeaks Fisher',
+  'Orrian Fisher',
+  "Dragon's End Fisher",
+  'Desert Fisher',
+  'Kaineng Fisher',
+  'Ascalonian Fisher',
+  'Ring of Fire Fisher',
+  'World Class Fisher',
+  'Desert Isles Fisher',
+  'Saltwater Fisher',
+  'Krytan Fisher',
+  'Maguuma Fisher',
+  'Seitung Province Fisher',
+  'Echovald Wilds Fisher',
+] as const
 export type CollectionName = typeof collectionNames[number]
 export const collectionOptions: CollectionName[] = [...collectionNames]
 

@@ -7,16 +7,21 @@ import {
   extendTheme,
   Container,
   Box,
+  Image,
+  Text,
   Button,
   HStack,
   IconButton,
 } from '@chakra-ui/react'
 
+// third party
+import { FaGithub } from 'react-icons/fa'
+
 // local
 import FishToJson from './FishToJson'
 import Tracker from './Tracker'
 import { ColorModeSwitcher } from './ColorModeSwitcher'
-import { FaGithub } from 'react-icons/fa'
+import './index.css'
 
 const theme = extendTheme({
   initialColorMode: 'dark',
@@ -27,10 +32,22 @@ export const App = () => {
 
   return (
     <ChakraProvider theme={theme}>
-      <Container maxW="container.xl">
+      <Container
+        display="flex"
+        flexDir="column"
+        maxW="container.xl"
+        maxH="100%"
+        h="100%"
+      >
         <HStack pt={4} justifyContent="space-between">
           <Box />
-          {process.env.NODE_ENV === 'development' && (
+          <HStack>
+            <Image src={`${process.env.PUBLIC_URL}/fishing.png`} />
+            <Text fontSize="3xl" fontFamily="PT Serif">
+              GW2 Fisher
+            </Text>
+          </HStack>
+          {process.env.NODE_ENV === 'development' && false && (
             <HStack>
               <Button onClick={() => setPage('tracker')}>Tracker</Button>
               <Button onClick={() => setPage('input')}>Input</Button>
@@ -50,10 +67,12 @@ export const App = () => {
             <ColorModeSwitcher />
           </Box>
         </HStack>
-        {page === 'tracker' && <Tracker />}
-        {process.env.NODE_ENV === 'development' && page === 'input' && (
-          <FishToJson />
-        )}
+        <Box flexGrow="1" overflow="hidden">
+          {page === 'tracker' && <Tracker />}
+          {process.env.NODE_ENV === 'development' && page === 'input' && (
+            <FishToJson />
+          )}
+        </Box>
       </Container>
     </ChakraProvider>
   )
