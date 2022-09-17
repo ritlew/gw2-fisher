@@ -14,6 +14,7 @@ type Rarity =
   | 'Legendary'
 
 interface Fish {
+  id: number
   name: string
   collection: CollectionName
   holes: HoleName[]

@@ -1,5 +1,5 @@
 // react
-import React from 'react'
+import React, { useContext } from 'react'
 
 // chakra ui
 import { Tr, Td, VStack, Text, Image, Button, HStack } from '@chakra-ui/react'
@@ -7,6 +7,7 @@ import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
 
 // local
 import Fish from './fish.interface'
+import CaughtFishContext from './CaughtFishContext'
 
 export const getRarityColor = (
   rarity: Fish['rarity'],
@@ -33,12 +34,13 @@ export const getRarityColor = (
 
 export interface FishRowProps {
   fish: Fish
-  hidden: boolean
-  onHide: (name: string) => void
-  onShow: (name: string) => void
 }
 
-const FishRow: React.FC<FishRowProps> = ({ fish, hidden, onHide, onShow }) => {
+const FishRow: React.FC<FishRowProps> = ({ fish }) => {
+  const { caughtFish, hideFish, showFish } = useContext(CaughtFishContext)
+
+  const hidden = caughtFish.includes(fish.id)
+
   return (
     <Tr display="table" w="100%" style={{ tableLayout: 'fixed' }}>
       <Td>
@@ -85,7 +87,7 @@ const FishRow: React.FC<FishRowProps> = ({ fish, hidden, onHide, onShow }) => {
           <Button
             colorScheme={hidden ? 'red' : 'blue'}
             leftIcon={hidden ? <CloseIcon /> : <CheckIcon />}
-            onClick={() => (hidden ? onShow(fish.name) : onHide(fish.name))}
+            onClick={() => (hidden ? showFish(fish.id) : hideFish(fish.id))}
           >
             {hidden ? 'Unhide' : 'Catch'}
           </Button>

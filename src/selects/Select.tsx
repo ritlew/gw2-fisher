@@ -11,7 +11,11 @@ import {
   MultiValue,
 } from 'chakra-react-select'
 
-type BaseProps<T> = { label?: string; options?: T[] }
+type BaseProps<T> = {
+  label?: string
+  options?: T[]
+  getLabel?: (value: T) => string
+}
 
 export type SelectProps<T> =
   | (BaseProps<T> & { multi: true; value: T[]; onChange: (value: T[]) => void })
@@ -22,11 +26,12 @@ const Select = <T,>({
   multi = false,
   options = [],
   value,
+  getLabel,
   onChange,
 }: SelectProps<T>) => {
   const selectOptions = options.map((option) => ({
     value: option,
-    label: option,
+    label: getLabel ? getLabel(option) : option,
   }))
   return (
     <FormControl>

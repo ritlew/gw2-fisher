@@ -21,7 +21,9 @@ import { FaGithub } from 'react-icons/fa'
 import FishToJson from './FishToJson'
 import Tracker from './Tracker'
 import { ColorModeSwitcher } from './ColorModeSwitcher'
+import CaughtFishContext from './CaughtFishContext'
 import './index.css'
+import useCaughtFish from './useCaughtFish'
 
 const theme = extendTheme({
   initialColorMode: 'dark',
@@ -29,51 +31,54 @@ const theme = extendTheme({
 
 export const App = () => {
   const [page, setPage] = useState<'tracker' | 'input'>('tracker')
+  const [caughtFish, hideFish, showFish] = useCaughtFish()
 
   return (
     <ChakraProvider theme={theme}>
-      <Container
-        display="flex"
-        flexDir="column"
-        maxW="container.xl"
-        maxH="100%"
-        h="100%"
-      >
-        <HStack pt={4} justifyContent="space-between">
-          <Box />
-          <HStack>
-            <Image src={`${process.env.PUBLIC_URL}/fishing.png`} />
-            <Text fontSize="3xl" fontFamily="PT Serif">
-              GW2 Fisher
-            </Text>
-          </HStack>
-          {process.env.NODE_ENV === 'development' && false && (
+      <CaughtFishContext.Provider value={{ caughtFish, showFish, hideFish }}>
+        <Container
+          display="flex"
+          flexDir="column"
+          maxW="container.xl"
+          maxH="100%"
+          h="100%"
+        >
+          <HStack pt={4} justifyContent="space-between">
+            <Box />
             <HStack>
-              <Button onClick={() => setPage('tracker')}>Tracker</Button>
-              <Button onClick={() => setPage('input')}>Input</Button>
+              <Image src={`${process.env.PUBLIC_URL}/fishing.png`} />
+              <Text fontSize="3xl" fontFamily="PT Serif">
+                GW2 Fisher
+              </Text>
             </HStack>
-          )}
-          <Box>
-            <IconButton
-              aria-label="Github Link"
-              title="View on GitHub"
-              variant="ghost"
-              onClick={() =>
-                window.open('https://github.com/ritlew/gw2-fisher')
-              }
-            >
-              <FaGithub />
-            </IconButton>
-            <ColorModeSwitcher />
+            {process.env.NODE_ENV === 'development' && false && (
+              <HStack>
+                <Button onClick={() => setPage('tracker')}>Tracker</Button>
+                <Button onClick={() => setPage('input')}>Input</Button>
+              </HStack>
+            )}
+            <Box>
+              <IconButton
+                aria-label="Github Link"
+                title="View on GitHub"
+                variant="ghost"
+                onClick={() =>
+                  window.open('https://github.com/ritlew/gw2-fisher')
+                }
+              >
+                <FaGithub />
+              </IconButton>
+              <ColorModeSwitcher />
+            </Box>
+          </HStack>
+          <Box flexGrow="1" overflow="hidden">
+            {page === 'tracker' && <Tracker />}
+            {process.env.NODE_ENV === 'development' && page === 'input' && (
+              <FishToJson />
+            )}
           </Box>
-        </HStack>
-        <Box flexGrow="1" overflow="hidden">
-          {page === 'tracker' && <Tracker />}
-          {process.env.NODE_ENV === 'development' && page === 'input' && (
-            <FishToJson />
-          )}
-        </Box>
-      </Container>
+        </Container>
+      </CaughtFishContext.Provider>
     </ChakraProvider>
   )
 }

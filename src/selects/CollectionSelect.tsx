@@ -1,11 +1,13 @@
 // react
-import React from 'react'
+import React, { useContext } from 'react'
 
 // chakra ui
 import { FormControl } from '@chakra-ui/react'
 
 // local
 import Select, { SelectProps } from './Select'
+import CaughtFishContext from '../CaughtFishContext'
+import fishList from '../fish'
 
 const collectionNames = [
   'Shiverpeaks Fisher',
@@ -27,11 +29,23 @@ export type CollectionName = typeof collectionNames[number]
 export const collectionOptions: CollectionName[] = [...collectionNames]
 
 const CollectionSelect = (props: SelectProps<CollectionName>) => {
+  const { caughtFish } = useContext(CaughtFishContext)
+
   return (
     <FormControl>
       <Select<CollectionName>
         {...props}
         label="Collection"
+        getLabel={(option) => {
+          const fishInCollection = fishList.filter(
+            (fish) => fish.collection === option
+          )
+          const fishCaughtInCollection = fishInCollection.reduce(
+            (sum, fish) => sum + (caughtFish.includes(fish.id) ? 1 : 0),
+            0
+          )
+          return `${option} (${fishCaughtInCollection}/${fishInCollection.length})`
+        }}
         options={collectionOptions}
       />
     </FormControl>

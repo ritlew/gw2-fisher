@@ -1,5 +1,5 @@
 // react
-import React, { useEffect, useReducer, useState } from 'react'
+import React, { useEffect, useReducer, useState, useContext } from 'react'
 
 // chakra ui
 import {
@@ -37,12 +37,11 @@ import TimeSelect, { Time } from './selects/TimeSelect'
 import HoleSelect, { HoleName } from './selects/HoleSelect'
 
 // local
-import fishJSON from './fish.json'
+import fishList from './fish'
 import Fish from './fish.interface'
+import CaughtFishContext from './CaughtFishContext'
 import FishRow, { getRarityColor } from './FishRow'
 import { ArrowDownIcon, ArrowUpIcon, CheckIcon } from '@chakra-ui/icons'
-
-const fishList = fishJSON as Fish[]
 
 const filterFish = (
   fishList: Fish[],
@@ -90,30 +89,6 @@ const filterFish = (
     })
 }
 
-const useHiddenFish = (): [
-  string[],
-  (newFish: string) => void,
-  (newFish: string) => void
-] => {
-  const hiddenStr = localStorage.getItem('hiddenFish')
-  const hidden: string[] = hiddenStr ? JSON.parse(hiddenStr) : []
-  const [hiddenFish, setHiddenFish] = useState(hidden)
-
-  return [
-    hiddenFish,
-    (newFish: string) => {
-      const newHidden = Array.from(new Set([...hidden, newFish]))
-      setHiddenFish(newHidden)
-      localStorage.setItem('hiddenFish', JSON.stringify(newHidden))
-    },
-    (newFish: string) => {
-      const newHidden = hidden.filter((fish) => fish !== newFish)
-      setHiddenFish(newHidden)
-      localStorage.setItem('hiddenFish', JSON.stringify(newHidden))
-    },
-  ]
-}
-
 interface TrackerProps {}
 
 const Tracker: React.FC<TrackerProps> = ({}) => {
@@ -131,7 +106,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
   const [holes, setHoles] = useState<HoleName[]>([])
   const [baits, setBaits] = useState<Bait[]>([])
   const [times, setTimes] = useState<Time[]>([])
-  const [hiddenFish, hideFish, showFish] = useHiddenFish()
+  const { caughtFish, hideFish, showFish } = useContext(CaughtFishContext)
   const [displayedFish, setDisplayedFish] = useState<Fish[]>(fishList as Fish[])
 
   useEffect(() => {
@@ -147,7 +122,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
     filteredFish.sort((f1, f2) => f1.collection.localeCompare(f2.collection))
 
     setDisplayedFish(filteredFish)
-  }, [includeAny, hiddenFish, filterText, collection, holes, baits, times])
+  }, [includeAny, caughtFish, filterText, collection, holes, baits, times])
 
   return (
     <Box display="flex" flexDir="column" height="100%">
@@ -246,17 +221,9 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
               </Thead>
               <Tbody overflowY="auto" display="block" h="calc(100% - 25px)">
                 {displayedFish
-                  .filter(
-                    (fish) => showHidden || !hiddenFish.includes(fish.name)
-                  )
+                  .filter((fish) => showHidden || !caughtFish.includes(fish.id))
                   .map((fish) => (
-                    <FishRow
-                      key={fish.name}
-                      fish={fish}
-                      hidden={hiddenFish.includes(fish.name)}
-                      onHide={(name) => hideFish(name)}
-                      onShow={(name) => showFish(name)}
-                    />
+                    <FishRow key={fish.name} fish={fish} />
                   ))}
               </Tbody>
             </Table>
@@ -283,9 +250,9 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
                           h="64px"
                           cursor="pointer"
                           onClick={() =>
-                            hiddenFish.includes(fish.name)
-                              ? showFish(fish.name)
-                              : hideFish(fish.name)
+                            caughtFish.includes(fish.id)
+                              ? showFish(fish.id)
+                              : hideFish(fish.id)
                           }
                         >
                           <Image
@@ -298,7 +265,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
                             h="64px"
                             src={fish.img}
                           />
-                          {hiddenFish.includes(fish.name) && (
+                          {caughtFish.includes(fish.id) && (
                             <>
                               <Box
                                 w="64px"
@@ -337,7 +304,10 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
                           <LabelBox label="Time">{fish.time}</LabelBox>
                           <LabelBox label="Holes">
                             {fish.holes.map((hole) => (
-                              <Text key={hole}>{hole}</Text>
+                              <React.Fragment key={hole}>
+                                {hole}
+                                <br />
+                              </React.Fragment>
                             ))}
                           </LabelBox>
                         </VStack>
