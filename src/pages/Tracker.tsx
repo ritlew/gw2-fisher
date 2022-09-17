@@ -31,16 +31,16 @@ import {
 import CollectionSelect, {
   CollectionName,
   collectionOptions,
-} from './selects/CollectionSelect'
-import BaitSelect, { Bait } from './selects/BaitSelect'
-import TimeSelect, { Time } from './selects/TimeSelect'
-import HoleSelect, { HoleName } from './selects/HoleSelect'
+} from '../components/selects/CollectionSelect'
+import BaitSelect, { Bait } from '../components/selects/BaitSelect'
+import TimeSelect, { Time } from '../components/selects/TimeSelect'
+import HoleSelect, { HoleName } from '../components/selects/HoleSelect'
 
 // local
-import fishList from './fish'
-import Fish from './fish.interface'
-import CaughtFishContext from './CaughtFishContext'
-import FishRow, { getRarityColor } from './FishRow'
+import fishList, { getRarityColor } from '../data/fish'
+import Fish from '../fish.interface'
+import CaughtFishContext from '../contexts/CaughtFishContext'
+import FishRow from '../components/FishRow'
 import { ArrowDownIcon, ArrowUpIcon, CheckIcon } from '@chakra-ui/icons'
 
 const filterFish = (

@@ -6,31 +6,9 @@ import { Tr, Td, VStack, Text, Image, Button, HStack } from '@chakra-ui/react'
 import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
 
 // local
-import Fish from './fish.interface'
-import CaughtFishContext from './CaughtFishContext'
-
-export const getRarityColor = (
-  rarity: Fish['rarity'],
-  { text }: { text?: boolean } = {}
-) => {
-  switch (rarity) {
-    default:
-    case 'Basic':
-      return '#AAA'
-    case 'Fine':
-      return '#62A4DA'
-    case 'Masterwork':
-      return '#1a9306'
-    case 'Rare':
-      return '#fcd00b'
-    case 'Exotic':
-      return '#ffa405'
-    case 'Ascended':
-      return '#fb3e8d'
-    case 'Legendary':
-      return text ? '#4C139D' : '#B181F7'
-  }
-}
+import Fish from '../fish.interface'
+import { getRarityColor } from '../data/fish'
+import CaughtFishContext from '../contexts/CaughtFishContext'
 
 export interface FishRowProps {
   fish: Fish

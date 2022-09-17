@@ -2,7 +2,7 @@
 import { createContext } from 'react'
 
 // local
-import Fish from './fish.interface'
+import Fish from '../fish.interface'
 
 interface CaughtFishContext {
   caughtFish: Fish['id'][]

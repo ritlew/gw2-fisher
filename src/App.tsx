@@ -1,5 +1,5 @@
 // react
-import React, { useState } from 'react'
+import React from 'react'
 
 // chakra ui
 import {
@@ -9,7 +9,6 @@ import {
   Box,
   Image,
   Text,
-  Button,
   HStack,
   IconButton,
 } from '@chakra-ui/react'
@@ -18,19 +17,17 @@ import {
 import { FaGithub } from 'react-icons/fa'
 
 // local
-import FishToJson from './FishToJson'
-import Tracker from './Tracker'
-import { ColorModeSwitcher } from './ColorModeSwitcher'
-import CaughtFishContext from './CaughtFishContext'
+import Tracker from './pages/Tracker'
+import { ColorModeSwitcher } from './components/ColorModeSwitcher'
+import CaughtFishContext from './contexts/CaughtFishContext'
+import useCaughtFish from './hooks/useCaughtFish'
 import './index.css'
-import useCaughtFish from './useCaughtFish'
 
 const theme = extendTheme({
   initialColorMode: 'dark',
 })
 
 export const App = () => {
-  const [page, setPage] = useState<'tracker' | 'input'>('tracker')
   const [caughtFish, hideFish, showFish] = useCaughtFish()
 
   return (
@@ -51,12 +48,6 @@ export const App = () => {
                 GW2 Fisher
               </Text>
             </HStack>
-            {process.env.NODE_ENV === 'development' && false && (
-              <HStack>
-                <Button onClick={() => setPage('tracker')}>Tracker</Button>
-                <Button onClick={() => setPage('input')}>Input</Button>
-              </HStack>
-            )}
             <Box>
               <IconButton
                 aria-label="Github Link"
@@ -72,10 +63,7 @@ export const App = () => {
             </Box>
           </HStack>
           <Box flexGrow="1" overflow="hidden">
-            {page === 'tracker' && <Tracker />}
-            {process.env.NODE_ENV === 'development' && page === 'input' && (
-              <FishToJson />
-            )}
+            <Tracker />
           </Box>
         </Container>
       </CaughtFishContext.Provider>

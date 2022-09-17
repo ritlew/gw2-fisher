@@ -1,8 +1,8 @@
 // local
-import { Bait } from './selects/BaitSelect'
-import { CollectionName } from './selects/CollectionSelect'
-import { HoleName } from './selects/HoleSelect'
-import { Time } from './selects/TimeSelect'
+import { Bait } from './components/selects/BaitSelect'
+import { CollectionName } from './components/selects/CollectionSelect'
+import { HoleName } from './components/selects/HoleSelect'
+import { Time } from './components/selects/TimeSelect'
 
 type Rarity =
   | 'Basic'

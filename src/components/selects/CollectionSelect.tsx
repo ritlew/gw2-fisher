@@ -6,8 +6,8 @@ import { FormControl } from '@chakra-ui/react'
 
 // local
 import Select, { SelectProps } from './Select'
-import CaughtFishContext from '../CaughtFishContext'
-import fishList from '../fish'
+import CaughtFishContext from '../../contexts/CaughtFishContext'
+import fishList from '../../data/fish'
 
 const collectionNames = [
   'Shiverpeaks Fisher',
