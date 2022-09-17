@@ -44,6 +44,52 @@ import { ArrowDownIcon, ArrowUpIcon, CheckIcon } from '@chakra-ui/icons'
 
 const fishList = fishJSON as Fish[]
 
+const filterFish = (
+  fishList: Fish[],
+  {
+    name,
+    collection,
+    holes,
+    baits,
+    times,
+    includeAny,
+  }: {
+    name: string
+    collection: CollectionName
+    holes: HoleName[]
+    baits: Bait[]
+    times: Time[]
+    includeAny: boolean
+  }
+): Fish[] => {
+  return fishList
+    .filter((fish) => fish.name.toLowerCase().includes(name.toLowerCase()))
+    .filter((fish) => collection === fish.collection)
+    .filter((fish) => {
+      return (
+        holes.length === 0 ||
+        (includeAny && fish.holes.includes('Any')) ||
+        holes.some((filterHole) =>
+          fish.holes.some((fishHole) => filterHole === fishHole)
+        )
+      )
+    })
+    .filter((fish) => {
+      return (
+        baits.length === 0 ||
+        (includeAny && fish.bait === 'Any') ||
+        baits.some((bait) => bait === fish.bait)
+      )
+    })
+    .filter((fish) => {
+      return (
+        times.length === 0 ||
+        (includeAny && fish.time === 'Any') ||
+        times.some((time) => time === fish.time)
+      )
+    })
+}
+
 const useHiddenFish = (): [
   string[],
   (newFish: string) => void,
@@ -89,62 +135,25 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
   const [displayedFish, setDisplayedFish] = useState<Fish[]>(fishList as Fish[])
 
   useEffect(() => {
-    const filteredFish = (fishList as Fish[]).filter((fish) => {
-      if (
-        filterText &&
-        !fish.name.toLowerCase().includes(filterText.toLowerCase())
-      ) {
-        return false
-      }
-      if (collection !== fish.collection) {
-        return false
-      }
-      /*
-      if (collections.length > 0 && !collections.includes(fish.collection)) {
-        return false
-      }
-      */
-      if (
-        holes.length > 0 &&
-        ((includeAny && fish.holes.includes('Any')) ||
-          holes.some((hole) => fish.holes.includes(hole)))
-      ) {
-        return true
-      }
-      if (
-        baits.length > 0 &&
-        ((includeAny && fish.bait === 'Any') || baits.includes(fish.bait))
-      ) {
-        return true
-      }
-      if (
-        times.length > 0 &&
-        ((!includeAny && fish.time === 'Any') || times.includes(fish.time))
-      ) {
-        return true
-      }
-      return holes.length === 0 && baits.length === 0 && times.length === 0
+    const filteredFish = filterFish(fishList, {
+      includeAny,
+      name: filterText,
+      collection,
+      holes,
+      baits,
+      times,
     })
 
     filteredFish.sort((f1, f2) => f1.collection.localeCompare(f2.collection))
 
     setDisplayedFish(filteredFish)
-  }, [
-    includeAny,
-    hiddenFish,
-    showHidden,
-    filterText,
-    collection,
-    holes,
-    baits,
-    times,
-  ])
+  }, [includeAny, hiddenFish, filterText, collection, holes, baits, times])
 
   return (
     <Box display="flex" flexDir="column" height="100%">
       <VStack p="2">
         <HStack w="100%" alignItems="end">
-          <FormControl w="auto" flexGrow="1">
+          <FormControl w="auto" flexGrow="2">
             <FormLabel mb="0">Fish Name</FormLabel>
             <Input
               size="sm"
@@ -152,6 +161,9 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
               onChange={(event) => setFilterText(event.target.value)}
             />
           </FormControl>
+          <Box flexGrow={1}>
+            <CollectionSelect value={collection} onChange={setCollection} />
+          </Box>
           {false && (
             <FormControl w="auto" flexGrow="1">
               <FormLabel mb="0">Sort (not working)</FormLabel>
@@ -176,43 +188,46 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
             {showHidden ? 'Hide Hidden' : 'Show Hidden'}
           </Button>
         </HStack>
-        <Box w="100%">
-          <Collapse in={open} style={{ overflow: 'unset' }}>
-            <SimpleGrid columns={2} spacing={2}>
-              <CollectionSelect value={collection} onChange={setCollection} />
-              <HoleSelect
-                multi
-                collection={collection}
-                value={holes}
-                onChange={setHoles}
-              />
-              <BaitSelect
-                multi
-                collection={collection}
-                value={baits}
-                onChange={setBaits}
-              />
-              <TimeSelect multi value={times} onChange={setTimes} />
-            </SimpleGrid>
-            <Center>
-              <Checkbox
-                mt={2}
-                isChecked={includeAny}
-                onChange={(event) => setIncludeAny(event.target.checked)}
-              >
-                Always include &quot;Any&quot;
-              </Checkbox>
-            </Center>
-          </Collapse>
-        </Box>
-        <Button
-          w="100%"
-          size="xs"
-          leftIcon={open ? <ArrowUpIcon /> : <ArrowDownIcon />}
-          onClick={() => setOpen(!open)}
-        >
-          Filters
-        </Button>
+        {view === 'table' && (
+          <>
+            <Box w="100%">
+              <Collapse in={open} style={{ overflow: 'unset' }}>
+                <SimpleGrid columns={3} spacing={2}>
+                  <HoleSelect
+                    multi
+                    collection={collection}
+                    value={holes}
+                    onChange={setHoles}
+                  />
+                  <BaitSelect
+                    multi
+                    collection={collection}
+                    value={baits}
+                    onChange={setBaits}
+                  />
+                  <TimeSelect multi value={times} onChange={setTimes} />
+                </SimpleGrid>
+                <Center>
+                  <Checkbox
+                    mt={2}
+                    isChecked={includeAny}
+                    onChange={(event) => setIncludeAny(event.target.checked)}
+                  >
+                    Always include &quot;Any&quot;
+                  </Checkbox>
+                </Center>
+              </Collapse>
+            </Box>
+            <Button
+              w="100%"
+              size="xs"
+              leftIcon={open ? <ArrowUpIcon /> : <ArrowDownIcon />}
+              onClick={() => setOpen(!open)}
+            >
+              Filters
+            </Button>
+          </>
+        )}
       </VStack>
       <Box flexGrow="1" overflow="hidden">
         {view === 'table' && (

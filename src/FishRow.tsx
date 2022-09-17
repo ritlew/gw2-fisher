@@ -16,25 +16,18 @@ export const getRarityColor = (
     default:
     case 'Basic':
       return '#AAA'
-      break
-    case 'Common':
+    case 'Fine':
       return '#62A4DA'
-      break
     case 'Masterwork':
       return '#1a9306'
-      break
     case 'Rare':
       return '#fcd00b'
-      break
     case 'Exotic':
       return '#ffa405'
-      break
     case 'Ascended':
       return '#fb3e8d'
-      break
     case 'Legendary':
       return text ? '#4C139D' : '#B181F7'
-      break
   }
 }
 

@@ -6,7 +6,7 @@ import { Time } from './selects/TimeSelect'
 
 type Rarity =
   | 'Basic'
-  | 'Common'
+  | 'Fine'
   | 'Masterwork'
   | 'Rare'
   | 'Exotic'
