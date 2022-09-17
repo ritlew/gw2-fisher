@@ -43,6 +43,7 @@ import CaughtFishContext from '../contexts/CaughtFishContext'
 import FishRow from '../components/FishRow'
 import { ArrowDownIcon, ArrowUpIcon, CheckIcon } from '@chakra-ui/icons'
 import useDayNightCycle from '../hooks/useDayNightCycle'
+import { useLocalStorageState } from '../hooks/useLocalStorage'
 
 const filterFish = (
   fishList: Fish[],
@@ -102,7 +103,8 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
     (showHidden) => !showHidden,
     false
   )
-  const [collection, setCollection] = useState<CollectionName>(
+  const [collection, setCollection] = useLocalStorageState<CollectionName>(
+    'collection',
     collectionOptions[0]
   )
   const [holes, setHoles] = useState<HoleName[]>([])
