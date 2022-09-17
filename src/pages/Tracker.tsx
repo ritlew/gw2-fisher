@@ -42,6 +42,7 @@ import Fish from '../fish.interface'
 import CaughtFishContext from '../contexts/CaughtFishContext'
 import FishRow from '../components/FishRow'
 import { ArrowDownIcon, ArrowUpIcon, CheckIcon } from '@chakra-ui/icons'
+import useDayNightCycle from '../hooks/useDayNightCycle'
 
 const filterFish = (
   fishList: Fish[],
@@ -96,6 +97,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
   const [open, setOpen] = useState(true)
   const [filterText, setFilterText] = useState('')
   const [includeAny, setIncludeAny] = useState(true)
+  const [autoTime, toggleAutotime] = useReducer((autoTime) => !autoTime, false)
   const [showHidden, toggleHide] = useReducer(
     (showHidden) => !showHidden,
     false
@@ -108,6 +110,13 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
   const [times, setTimes] = useState<Time[]>([])
   const { caughtFish, hideFish, showFish } = useContext(CaughtFishContext)
   const [displayedFish, setDisplayedFish] = useState<Fish[]>(fishList as Fish[])
+  const { time } = useDayNightCycle()
+
+  useEffect(() => {
+    if (autoTime && times.every((selectedTime) => selectedTime === time)) {
+      setTimes([time])
+    }
+  }, [autoTime, time])
 
   useEffect(() => {
     const filteredFish = filterFish(fishList, {
@@ -127,8 +136,8 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
   return (
     <Box display="flex" flexDir="column" height="100%">
       <VStack p="2">
-        <HStack w="100%" alignItems="end">
-          <FormControl w="auto" flexGrow="2">
+        <SimpleGrid w="100%" columns={3} spacing={2}>
+          <FormControl w="auto" flex="1 1">
             <FormLabel mb="0">Fish Name</FormLabel>
             <Input
               size="sm"
@@ -136,7 +145,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
               onChange={(event) => setFilterText(event.target.value)}
             />
           </FormControl>
-          <Box flexGrow={1}>
+          <Box flex="1 1">
             <CollectionSelect value={collection} onChange={setCollection} />
           </Box>
           {false && (
@@ -147,7 +156,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
               </Select>
             </FormControl>
           )}
-          <FormControl w="auto" flexGrow="1">
+          <FormControl w="auto" flex="1 1">
             <FormLabel mb="0">View</FormLabel>
             <Select
               size="sm"
@@ -159,10 +168,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
               <option value="collection">Collection</option>
             </Select>
           </FormControl>
-          <Button size="sm" onClick={() => toggleHide()}>
-            {showHidden ? 'Hide Hidden' : 'Show Hidden'}
-          </Button>
-        </HStack>
+        </SimpleGrid>
         {view === 'table' && (
           <>
             <Box w="100%">
@@ -180,16 +186,34 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
                     value={baits}
                     onChange={setBaits}
                   />
-                  <TimeSelect multi value={times} onChange={setTimes} />
+                  <TimeSelect
+                    multi
+                    isDisabled={autoTime}
+                    value={times}
+                    onChange={setTimes}
+                  />
                 </SimpleGrid>
-                <Center>
-                  <Checkbox
-                    mt={2}
-                    isChecked={includeAny}
-                    onChange={(event) => setIncludeAny(event.target.checked)}
-                  >
-                    Always include &quot;Any&quot;
-                  </Checkbox>
+                <Center mt={2}>
+                  <HStack spacing="1rem">
+                    <Checkbox
+                      isChecked={includeAny}
+                      onChange={(event) => setIncludeAny(event.target.checked)}
+                    >
+                      Always include &quot;Any&quot;
+                    </Checkbox>
+                    <Checkbox
+                      isChecked={autoTime}
+                      onChange={() => toggleAutotime()}
+                    >
+                      Auto-set Time
+                    </Checkbox>
+                    <Checkbox
+                      isChecked={showHidden}
+                      onChange={() => toggleHide()}
+                    >
+                      Show Hidden
+                    </Checkbox>
+                  </HStack>
                 </Center>
               </Collapse>
             </Box>

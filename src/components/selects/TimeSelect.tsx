@@ -8,7 +8,7 @@ import { FormControl } from '@chakra-ui/react'
 import Select, { SelectProps } from './Select'
 import { CollectionName } from './CollectionSelect'
 
-const times = ['Any', 'Daytime', 'Nighttime', 'Dusk/Dawn']
+const times = ['Any', 'Daytime', 'Nighttime', 'Dusk/Dawn'] as const
 export type Time = typeof times[number]
 export const timeOptions = [...times]
 

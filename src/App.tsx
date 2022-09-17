@@ -11,6 +11,8 @@ import {
   Text,
   HStack,
   IconButton,
+  Center,
+  Divider,
 } from '@chakra-ui/react'
 
 // third party
@@ -22,6 +24,7 @@ import { ColorModeSwitcher } from './components/ColorModeSwitcher'
 import CaughtFishContext from './contexts/CaughtFishContext'
 import useCaughtFish from './hooks/useCaughtFish'
 import './index.css'
+import DayNightBar from './components/DayNightInfo'
 
 const theme = extendTheme({
   initialColorMode: 'dark',
@@ -40,15 +43,24 @@ export const App = () => {
           maxH="100%"
           h="100%"
         >
-          <HStack pt={4} justifyContent="space-between">
-            <Box />
-            <HStack>
-              <Image src={`${process.env.PUBLIC_URL}/fishing.png`} />
-              <Text fontSize="3xl" fontFamily="PT Serif">
-                GW2 Fisher
-              </Text>
-            </HStack>
-            <Box>
+          <Box display="flex">
+            <Box flex="1 1">
+              <HStack>
+                <Image src={`${process.env.PUBLIC_URL}/fishing.png`} />
+                <Text fontSize="3xl" fontFamily="PT Serif">
+                  GW2 Fisher
+                </Text>
+              </HStack>
+            </Box>
+            <Center flex="1 1">
+              <DayNightBar />
+            </Center>
+            <Box
+              display="flex"
+              flex="1 1"
+              alignItems="center"
+              justifyContent="flex-end"
+            >
               <IconButton
                 aria-label="Github Link"
                 title="View on GitHub"
@@ -61,7 +73,8 @@ export const App = () => {
               </IconButton>
               <ColorModeSwitcher />
             </Box>
-          </HStack>
+          </Box>
+          <Divider my={2} />
           <Box flexGrow="1" overflow="hidden">
             <Tracker />
           </Box>

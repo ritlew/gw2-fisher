@@ -13,6 +13,7 @@ import {
 
 type BaseProps<T> = {
   label?: string
+  isDisabled?: boolean
   options?: T[]
   getLabel?: (value: T) => string
 }
@@ -24,6 +25,7 @@ export type SelectProps<T> =
 const Select = <T,>({
   label = '',
   multi = false,
+  isDisabled = false,
   options = [],
   value,
   getLabel,
@@ -33,14 +35,22 @@ const Select = <T,>({
     value: option,
     label: getLabel ? getLabel(option) : option,
   }))
+
   return (
     <FormControl>
       <FormLabel mb="0">{label}</FormLabel>
       <ChakraSelect
         size="sm"
+        isDisabled={isDisabled}
         isMulti={multi}
         variant="outline"
-        value={selectOptions.find((option) => option.value === value)}
+        value={
+          multi
+            ? selectOptions.filter((option) =>
+                (value as T[]).includes(option.value)
+              )
+            : selectOptions.find((option) => option.value === value)
+        }
         onChange={(value2) => {
           if (multi) {
             ;(onChange as (value: T[]) => void)(
