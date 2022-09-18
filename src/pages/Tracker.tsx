@@ -1,5 +1,5 @@
 // react
-import React, { useEffect, useReducer, useState, useContext } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 
 // chakra ui
 import {
