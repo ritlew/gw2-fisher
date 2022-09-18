@@ -30,9 +30,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-I wanted an complete display of the my fishing progress as well as what bait, hole, and time I needed for the rest of my achievement progress. Thus I created this application to both display the relevant information as well as track my current progress.
+I was working on my fishing achievements but got extemely tired of opening the hero panel over and over to check my progress and fish information. I wanted an complete display of the my fishing progress as well as what bait, hole, and time I needed for the rest of my achievement progress. Thus I created this application to both display the relevant information as well as track my current progress.
 
-![Example image of application](https://user-images.githubusercontent.com/16658359/190873981-6ea318bc-8561-48f7-b1ec-f32570bac504.png)
+![Example image of application](https://user-images.githubusercontent.com/16658359/190915307-7b492421-3b26-4522-8d35-8061c784c500.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -40,10 +40,7 @@ I wanted an complete display of the my fishing progress as well as what bait, ho
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Simply navigatee to https://ritlew.github.io/gw2-fisher/ and select the collection you're working on. You can now see the relevant information for catching this fish and mark them as caught when you catch them. The view drop down may be helpful when inputing fish that you've previously caught.
-
-
-
+Simply navigatee to https://ritlew.github.io/gw2-fisher/ and select the collection you're working on. You can now see the relevant information for catching fish and mark them as caught the first tiem you catch each one. The collection view helps compare the information against your achievement panel.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
