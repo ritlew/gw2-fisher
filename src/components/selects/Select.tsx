@@ -10,31 +10,40 @@ import {
   SingleValue,
   MultiValue,
 } from 'chakra-react-select'
+import { CSSObject } from '@emotion/react'
 
-type BaseProps<T> = {
+type BaseProps<T extends string> = {
   label?: string
   isDisabled?: boolean
+  sort?: boolean
   options?: T[]
   getLabel?: (value: T) => string
+  getOptionStyle?: (value: T, options: { selected: boolean }) => CSSObject
 }
 
-export type SelectProps<T> =
+export type SelectProps<T extends string> =
   | (BaseProps<T> & { multi: true; value: T[]; onChange: (value: T[]) => void })
   | (BaseProps<T> & { multi?: false; value: T; onChange: (value: T) => void })
 
-const Select = <T,>({
+const Select = <T extends string>({
   label = '',
   multi = false,
   isDisabled = false,
+  sort = false,
   options = [],
   value,
   getLabel,
+  getOptionStyle,
   onChange,
 }: SelectProps<T>) => {
   const selectOptions = options.map((option) => ({
     value: option,
     label: getLabel ? getLabel(option) : option,
   }))
+
+  if (sort) {
+    selectOptions.sort((a, b) => a.label.localeCompare(b.label))
+  }
 
   return (
     <FormControl>
@@ -64,6 +73,24 @@ const Select = <T,>({
                 options[0]
             )
           }
+        }}
+        chakraStyles={{
+          option: (provided, state) => {
+            const extra =
+              getOptionStyle?.(state.data.value, {
+                selected: state.isSelected,
+              }) ?? {}
+
+            return { ...provided, ...extra }
+          },
+          singleValue: (provided, state) => {
+            const extra =
+              getOptionStyle?.(state.data.value, {
+                selected: false,
+              }) ?? {}
+
+            return { ...provided, ...extra }
+          },
         }}
         options={selectOptions}
       />
