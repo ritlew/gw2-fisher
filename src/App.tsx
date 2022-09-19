@@ -23,8 +23,9 @@ import Tracker from './pages/Tracker'
 import { ColorModeSwitcher } from './components/ColorModeSwitcher'
 import CaughtFishContext from './contexts/CaughtFishContext'
 import useCaughtFish from './hooks/useCaughtFish'
-import './index.css'
 import DayNightBar from './components/DayNightInfo'
+import LinksFooter from './components/LinksFooter'
+import './index.css'
 
 const theme = extendTheme({
   initialColorMode: 'dark',
@@ -78,6 +79,7 @@ export const App = () => {
           <Box flexGrow="1" overflow="hidden">
             <Tracker />
           </Box>
+          <LinksFooter />
         </Container>
       </CaughtFishContext.Provider>
     </ChakraProvider>

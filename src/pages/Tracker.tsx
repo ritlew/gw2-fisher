@@ -248,7 +248,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
       </VStack>
       <Box flexGrow="1" overflow="hidden">
         {view === 'table' && (
-          <TableContainer py={6} h="100%" overflow="hidden">
+          <TableContainer pt={6} h="100%" overflow="hidden">
             <Table size="sm" display="block" overflow="hidden" h="100%">
               <Thead display="table" w="100%" style={{ tableLayout: 'fixed' }}>
                 <Tr>
