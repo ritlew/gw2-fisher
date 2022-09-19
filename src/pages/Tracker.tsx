@@ -15,7 +15,6 @@ import {
   Tr,
   Th,
   Tbody,
-  Input,
   FormControl,
   FormLabel,
   HStack,
@@ -49,14 +48,12 @@ import { useLocalStorageState } from '../hooks/useLocalStorage'
 const filterFish = (
   fishList: Fish[],
   {
-    name,
     collection,
     holes,
     baits,
     times,
     includeAny,
   }: {
-    name: string
     collection: CollectionName
     holes: HoleName[]
     baits: Bait[]
@@ -65,7 +62,6 @@ const filterFish = (
   }
 ): Fish[] => {
   return fishList
-    .filter((fish) => fish.name.toLowerCase().includes(name.toLowerCase()))
     .filter((fish) => collection === fish.collection)
     .filter((fish) => {
       return (
@@ -104,8 +100,7 @@ interface TrackerProps {}
 
 const Tracker: React.FC<TrackerProps> = ({}) => {
   const [view, setView] = useState<'table' | 'collection'>('table')
-  const [open, setOpen] = useState(true)
-  const [filterText, setFilterText] = useState('')
+  const [showFilters, setShowFilters] = useState(true)
   const [includeAny, setIncludeAny] = useBoolean(true)
   const [autoTime, setAutoTime] = useBoolean()
   const [showHidden, setShowHiddenHide] = useBoolean()
@@ -135,7 +130,6 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
   useEffect(() => {
     const filteredFish = filterFish(collectionFishMap[collection], {
       includeAny,
-      name: filterText,
       collection,
       holes,
       baits,
@@ -145,21 +139,13 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
     filteredFish.sort((f1, f2) => f1.collection.localeCompare(f2.collection))
 
     setDisplayedFish(filteredFish)
-  }, [includeAny, caughtFish, filterText, collection, holes, baits, times])
+  }, [includeAny, caughtFish, collection, holes, baits, times])
 
   return (
     <Box display="flex" flexDir="column" height="100%">
       <VStack p="2">
-        <SimpleGrid w="100%" columns={3} spacing={2}>
-          <FormControl w="auto" flex="1 1">
-            <FormLabel mb="0">Fish Name</FormLabel>
-            <Input
-              size="sm"
-              value={filterText}
-              onChange={(event) => setFilterText(event.target.value)}
-            />
-          </FormControl>
-          <Box flex="1 1">
+        <Center w="50%">
+          <SimpleGrid w="100%" columns={2} spacing={2} alignItems="flex-end">
             <CollectionSelect
               sort
               value={collection}
@@ -169,32 +155,26 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
                 setCollection(collection)
               }}
             />
-          </Box>
-          {false && (
-            <FormControl w="auto" flexGrow="1">
-              <FormLabel mb="0">Sort (not working)</FormLabel>
-              <Select size="sm">
-                <option value="collection a-z">Collection (A-Z)</option>
-              </Select>
-            </FormControl>
-          )}
-          <FormControl w="auto" flex="1 1">
-            <FormLabel mb="0">View</FormLabel>
-            <Select
+            {false && (
+              <FormControl w="auto" flexGrow="1">
+                <FormLabel mb="0">Sort (not working)</FormLabel>
+                <Select size="sm">
+                  <option value="collection a-z">Collection (A-Z)</option>
+                </Select>
+              </FormControl>
+            )}
+            <Button
               size="sm"
-              onChange={(event) =>
-                setView(event.target.value as 'table' | 'collection')
-              }
+              onClick={() => setView(view === 'table' ? 'collection' : 'table')}
             >
-              <option value="table">Table</option>
-              <option value="collection">Collection</option>
-            </Select>
-          </FormControl>
-        </SimpleGrid>
+              {`Switch to ${view === 'table' ? 'collection' : 'table'} view`}
+            </Button>
+          </SimpleGrid>
+        </Center>
         {view === 'table' && (
           <>
             <Box w="100%">
-              <Collapse in={open} style={{ overflow: 'unset' }}>
+              <Collapse in={showFilters} style={{ overflow: 'unset' }}>
                 <SimpleGrid columns={3} spacing={2}>
                   <HoleSelect
                     multi
@@ -242,8 +222,8 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
             <Button
               w="100%"
               size="xs"
-              leftIcon={open ? <ArrowUpIcon /> : <ArrowDownIcon />}
-              onClick={() => setOpen(!open)}
+              leftIcon={showFilters ? <ArrowUpIcon /> : <ArrowDownIcon />}
+              onClick={() => setShowFilters(!showFilters)}
             >
               Filters
             </Button>

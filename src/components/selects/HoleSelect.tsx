@@ -62,7 +62,7 @@ const HoleSelect = (
   }
   return (
     <FormControl>
-      <Select<HoleName> {...props} label="Hole" options={options} />
+      <Select<HoleName> {...props} label="Fishing Hole" options={options} />
     </FormControl>
   )
 }
