@@ -163,7 +163,11 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
             <CollectionSelect
               sort
               value={collection}
-              onChange={setCollection}
+              onChange={(collection) => {
+                setHoles([])
+                setBaits([])
+                setCollection(collection)
+              }}
             />
           </Box>
           {false && (
