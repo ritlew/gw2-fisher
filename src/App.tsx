@@ -44,7 +44,7 @@ export const App = () => {
           maxH="100%"
           h="100%"
         >
-          <Box display="flex">
+          <Box display="flex" mt="0.5rem">
             <Box flex="1 1">
               <HStack>
                 <Image src={`${process.env.PUBLIC_URL}/fishing.png`} />
@@ -75,7 +75,7 @@ export const App = () => {
               <ColorModeSwitcher />
             </Box>
           </Box>
-          <Divider my={2} />
+          <Divider my="0.5rem" />
           <Box flexGrow="1" overflow="hidden">
             <Tracker />
           </Box>
