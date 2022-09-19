@@ -123,7 +123,11 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
   const { time } = useDayNightCycle()
 
   useEffect(() => {
-    if (autoTime && times.every((selectedTime) => selectedTime === time)) {
+    if (
+      autoTime &&
+      (times.length === 0 ||
+        !times.every((selectedTime) => selectedTime === time))
+    ) {
       setTimes([time])
     }
   }, [autoTime, time])
