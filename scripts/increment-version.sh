@@ -24,7 +24,7 @@ done
 if [ "$version_type" != "none" ]; then
   version=$(npm version $version_type)
   git push
-  git push origin v$version
+  git push origin $version
 fi
 
 echo "REACT_APP_VERSION=$(node -p "require('./package.json').version")" > .env.local
