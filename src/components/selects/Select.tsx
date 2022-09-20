@@ -1,5 +1,5 @@
 // react
-import React from 'react'
+import React, { CSSProperties } from 'react'
 
 // chakra ui
 import { FormControl, FormLabel } from '@chakra-ui/react'
@@ -10,7 +10,6 @@ import {
   SingleValue,
   MultiValue,
 } from 'chakra-react-select'
-import { CSSObject } from '@emotion/react'
 
 type BaseProps<T extends string> = {
   label?: string
@@ -18,7 +17,7 @@ type BaseProps<T extends string> = {
   sort?: boolean
   options?: T[]
   getLabel?: (value: T) => string
-  getOptionStyle?: (value: T, options: { selected: boolean }) => CSSObject
+  getOptionStyle?: (value: T, options: { selected: boolean }) => CSSProperties
 }
 
 export type SelectProps<T extends string> =
