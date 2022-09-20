@@ -28,7 +28,10 @@ const DayNightInfo: React.FC<DayNightInfoProps> = ({ canthanTime = false }) => {
     <Box display="flex" justifyContent="space-around">
       <HStack>
         <VStack spacing={0}>
-          <Text fontSize="xs">Current</Text>
+          <Text fontSize="xs">
+            Current
+            {canthanTime && <>&nbsp;(Canthan)</>}
+          </Text>
           <Text>{time}</Text>
         </VStack>
         <Divider orientation="vertical" />
