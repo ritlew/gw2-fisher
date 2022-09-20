@@ -5,11 +5,14 @@ import React from 'react'
 import { Box, Text, HStack, VStack, Divider } from '@chakra-ui/react'
 import useDayNightCycle from '../hooks/useDayNightCycle'
 
-interface DayNightInfoProps {}
+interface DayNightInfoProps {
+  canthanTime?: boolean
+}
 
-const DayNightInfo: React.FC<DayNightInfoProps> = ({}) => {
+const DayNightInfo: React.FC<DayNightInfoProps> = ({ canthanTime = false }) => {
   const { time, next, msUntilNext } = useDayNightCycle({
     updateMsUntilNext: true,
+    canthanTime,
   })
 
   const countdown =

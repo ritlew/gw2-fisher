@@ -25,14 +25,30 @@ import CaughtFishContext from './contexts/CaughtFishContext'
 import useCaughtFish from './hooks/useCaughtFish'
 import DayNightBar from './components/DayNightInfo'
 import LinksFooter from './components/LinksFooter'
+import { useLocalStorageState } from './hooks/useLocalStorage'
+import {
+  collectionOptions,
+  CollectionName,
+} from './components/selects/CollectionSelect'
 import './index.css'
 
 const theme = extendTheme({
   initialColorMode: 'dark',
 })
 
+const canthanCollections = [
+  "Dragon's End Fisher",
+  'Kaineng Fisher',
+  'Seitung Province Fisher',
+  'Echovald Wilds Fisher',
+]
+
 export const App = () => {
   const [caughtFish, hideFish, showFish] = useCaughtFish()
+  const [collection, setCollection] = useLocalStorageState<CollectionName>(
+    'collection',
+    collectionOptions[0]
+  )
 
   return (
     <ChakraProvider theme={theme}>
@@ -54,7 +70,9 @@ export const App = () => {
               </HStack>
             </Box>
             <Center flex="1 1">
-              <DayNightBar />
+              <DayNightBar
+                canthanTime={canthanCollections.includes(collection)}
+              />
             </Center>
             <Box
               display="flex"
@@ -77,7 +95,10 @@ export const App = () => {
           </Box>
           <Divider my="0.5rem" />
           <Box flexGrow="1" overflow="hidden">
-            <Tracker />
+            <Tracker
+              collection={collection}
+              onCollectionChange={setCollection}
+            />
           </Box>
           <LinksFooter />
         </Container>

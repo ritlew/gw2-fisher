@@ -30,7 +30,6 @@ import {
 } from '@chakra-ui/react'
 import CollectionSelect, {
   CollectionName,
-  collectionOptions,
 } from '../components/selects/CollectionSelect'
 import BaitSelect, { Bait } from '../components/selects/BaitSelect'
 import TimeSelect, { Time } from '../components/selects/TimeSelect'
@@ -43,7 +42,6 @@ import CaughtFishContext from '../contexts/CaughtFishContext'
 import FishRow from '../components/FishRow'
 import { ArrowDownIcon, ArrowUpIcon, CheckIcon } from '@chakra-ui/icons'
 import useDayNightCycle from '../hooks/useDayNightCycle'
-import { useLocalStorageState } from '../hooks/useLocalStorage'
 
 const filterFish = (
   fishList: Fish[],
@@ -96,18 +94,20 @@ const collectionFishMap = fishList.reduce<Record<CollectionName, Fish[]>>(
   {} as Record<CollectionName, Fish[]>
 )
 
-interface TrackerProps {}
+interface TrackerProps {
+  collection: CollectionName
+  onCollectionChange: (collection: CollectionName) => void
+}
 
-const Tracker: React.FC<TrackerProps> = ({}) => {
+const Tracker: React.FC<TrackerProps> = ({
+  collection,
+  onCollectionChange,
+}) => {
   const [view, setView] = useState<'table' | 'collection'>('table')
   const [showFilters, setShowFilters] = useState(true)
   const [includeAny, setIncludeAny] = useBoolean(true)
   const [autoTime, setAutoTime] = useBoolean()
   const [showHidden, setShowHiddenHide] = useBoolean()
-  const [collection, setCollection] = useLocalStorageState<CollectionName>(
-    'collection',
-    collectionOptions[0]
-  )
   const [holes, setHoles] = useState<HoleName[]>([])
   const [baits, setBaits] = useState<Bait[]>([])
   const [times, setTimes] = useState<Time[]>([])
@@ -152,7 +152,7 @@ const Tracker: React.FC<TrackerProps> = ({}) => {
               onChange={(collection) => {
                 setHoles([])
                 setBaits([])
-                setCollection(collection)
+                onCollectionChange(collection)
               }}
             />
             {false && (

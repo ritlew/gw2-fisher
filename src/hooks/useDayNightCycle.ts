@@ -11,35 +11,54 @@ const cycleInfo: { label: Time; cutoff: number }[] = [
   { label: 'Dusk/Dawn', cutoff: 1000 * 60 * 120 },
 ]
 
-const getMsInCycle = (): number => {
-  // cycle is a 2 hour period offset by 30 minutes
-  return (Date.now() - 1000 * 60 * 30) % (1000 * 60 * 60 * 2)
+const canthanCycleInfo: { label: Time; cutoff: number }[] = [
+  { label: 'Daytime', cutoff: 1000 * 60 * 55 },
+  { label: 'Dusk/Dawn', cutoff: 1000 * 60 * 60 },
+  { label: 'Nighttime', cutoff: 1000 * 60 * 115 },
+  { label: 'Dusk/Dawn', cutoff: 1000 * 60 * 120 },
+]
+
+const getCycleInfo = (canthanTime: boolean) => {
+  return canthanTime ? canthanCycleInfo : cycleInfo
 }
 
-const getCurrentTime = (): Time => {
-  const msInCycle = getMsInCycle()
-  const cycleIndex = cycleInfo.findIndex((info) => msInCycle < info.cutoff)
-  return cycleInfo[cycleIndex].label
+const getMsInCycle = (canthanTime: boolean): number => {
+  // cycle is a 2 hour period offset by 30 minutes
+  return (
+    (Date.now() - 1000 * 60 * (canthanTime ? 40 : 30)) % (1000 * 60 * 60 * 2)
+  )
+}
+
+const getCurrentTime = (canthanTime: boolean): Time => {
+  const msInCycle = getMsInCycle(canthanTime)
+  const cycle = getCycleInfo(canthanTime)
+  const cycleIndex = cycle.findIndex((info) => msInCycle < info.cutoff)
+  return cycle[cycleIndex].label
 }
 
 const useDayNightCycle = (
-  { updateMsUntilNext }: { updateMsUntilNext?: boolean } = {
+  {
+    updateMsUntilNext = false,
+    canthanTime = false,
+  }: { updateMsUntilNext?: boolean; canthanTime?: boolean } = {
     updateMsUntilNext: false,
+    canthanTime: false,
   }
 ) => {
-  const [[current, msInCycle], setCurrent] = useState<[Time, number]>([
-    getCurrentTime(),
-    getMsInCycle(),
-  ])
+  const [, setCurrentMs] = useState<number>(getMsInCycle(canthanTime))
 
-  const currentInfo = cycleInfo.find((time) => time.label === current)
-  const msUntilNext = currentInfo ? currentInfo.cutoff - msInCycle : 0
+  const current = getCurrentTime(canthanTime)
+  const cycle = getCycleInfo(canthanTime)
+  const currentInfo = cycle.find((time) => time.label === current)
+  const msUntilNext = currentInfo
+    ? currentInfo.cutoff - getMsInCycle(canthanTime)
+    : 0
 
   useEffect(() => {
     const intervalID = setInterval(() => {
-      const now = getCurrentTime()
+      const now = getCurrentTime(canthanTime)
       if (updateMsUntilNext || now[0] !== current) {
-        setCurrent([getCurrentTime(), getMsInCycle()])
+        setCurrentMs(getMsInCycle(canthanTime))
       }
     }, 1000)
 
@@ -47,10 +66,11 @@ const useDayNightCycle = (
   })
 
   return {
-    time: current,
-    next: cycleInfo[
-      (cycleInfo.findIndex((time) => time.label === current) + 1) %
-        cycleInfo.length
+    time: getCurrentTime(canthanTime),
+    next: cycle[
+      (cycle.findIndex((time) => time.label === getCurrentTime(canthanTime)) +
+        1) %
+        cycle.length
     ].label,
     msUntilNext,
   }
