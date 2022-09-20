@@ -48,11 +48,10 @@ const useDayNightCycle = (
   const [, setCurrentMs] = useState<number>(getMsInCycle(canthanTime))
 
   const current = getCurrentTime(canthanTime)
+  const msInCycle = getMsInCycle(canthanTime)
   const cycle = getCycleInfo(canthanTime)
-  const currentInfo = cycle.find((time) => time.label === current)
-  const msUntilNext = currentInfo
-    ? currentInfo.cutoff - getMsInCycle(canthanTime)
-    : 0
+  const currentInfo = cycle.find((time) => msInCycle < time.cutoff)
+  const msUntilNext = currentInfo ? currentInfo.cutoff - msInCycle : 0
 
   useEffect(() => {
     const intervalID = setInterval(() => {
