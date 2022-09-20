@@ -23,7 +23,7 @@ const getCycleInfo = (canthanTime: boolean) => {
 }
 
 const getMsInCycle = (canthanTime: boolean): number => {
-  // cycle is a 2 hour period offset by 30 minutes
+  // cycle is a 2 hour period offset by 30 or 40 minutes depending on location
   return (
     (Date.now() - 1000 * 60 * (canthanTime ? 40 : 30)) % (1000 * 60 * 60 * 2)
   )
@@ -52,11 +52,16 @@ const useDayNightCycle = (
   const cycle = getCycleInfo(canthanTime)
   const currentInfo = cycle.find((time) => msInCycle < time.cutoff)
   const msUntilNext = currentInfo ? currentInfo.cutoff - msInCycle : 0
+  const nextInCycle =
+    cycle[
+      (cycle.findIndex((time) => msInCycle < time.cutoff) + 1) % cycle.length
+    ]
 
+  // check for new point in cycle periodically
   useEffect(() => {
     const intervalID = setInterval(() => {
       const now = getCurrentTime(canthanTime)
-      if (updateMsUntilNext || now[0] !== current) {
+      if (updateMsUntilNext || now !== current) {
         setCurrentMs(getMsInCycle(canthanTime))
       }
     }, 1000)
@@ -65,12 +70,8 @@ const useDayNightCycle = (
   })
 
   return {
-    time: getCurrentTime(canthanTime),
-    next: cycle[
-      (cycle.findIndex((time) => time.label === getCurrentTime(canthanTime)) +
-        1) %
-        cycle.length
-    ].label,
+    time: current,
+    next: nextInCycle.label,
     msUntilNext,
   }
 }
