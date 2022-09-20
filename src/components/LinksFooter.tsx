@@ -22,9 +22,13 @@ interface LinksFooterProps {}
 const LinksFooter: React.FC<LinksFooterProps> = ({}) => {
   const toast = useToast()
 
+  console.log(process.env)
+
   return (
     <Center my="0.5rem">
       <HStack>
+        <Text fontSize="sm">Version {process.env.REACT_APP_VERSION}</Text>
+        <Text>·</Text>
         <Text fontSize="sm">Made by</Text>
         <Tag
           as={Link}
