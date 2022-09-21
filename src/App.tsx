@@ -50,6 +50,8 @@ export const App = () => {
     collectionOptions[0]
   )
 
+  const canthanTime = canthanCollections.includes(collection)
+
   return (
     <ChakraProvider theme={theme}>
       <CaughtFishContext.Provider value={{ caughtFish, showFish, hideFish }}>
@@ -70,9 +72,7 @@ export const App = () => {
               </HStack>
             </Box>
             <Center flex="1 1">
-              <DayNightBar
-                canthanTime={canthanCollections.includes(collection)}
-              />
+              <DayNightBar canthanTime={canthanTime} />
             </Center>
             <Box
               display="flex"
@@ -96,6 +96,7 @@ export const App = () => {
           <Divider my="0.5rem" />
           <Box flexGrow="1" overflow="hidden">
             <Tracker
+              canthanTime={canthanTime}
               collection={collection}
               onCollectionChange={setCollection}
             />

@@ -95,11 +95,13 @@ const collectionFishMap = fishList.reduce<Record<CollectionName, Fish[]>>(
 )
 
 interface TrackerProps {
+  canthanTime: boolean
   collection: CollectionName
   onCollectionChange: (collection: CollectionName) => void
 }
 
 const Tracker: React.FC<TrackerProps> = ({
+  canthanTime,
   collection,
   onCollectionChange,
 }) => {
@@ -115,7 +117,7 @@ const Tracker: React.FC<TrackerProps> = ({
   const [displayedFish, setDisplayedFish] = useState<Fish[]>(
     collectionFishMap[collection]
   )
-  const { time } = useDayNightCycle()
+  const { time } = useDayNightCycle({ canthanTime })
 
   useEffect(() => {
     if (
