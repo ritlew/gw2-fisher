@@ -1,6 +1,6 @@
 {
   "name": "gw2-fisher",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.9",
