@@ -1472,7 +1472,8 @@
     ],
     "bait": "Any",
     "time": "Any",
-    "img": "https://render.guildwars2.com/file/7ABD90BC02D32BDE39779E4ECCCBDFC8D41462E1/2594684.png"
+    "img": "https://render.guildwars2.com/file/7ABD90BC02D32BDE39779E4ECCCBDFC8D41462E1/2594684.png",
+    "info": "Only in Draconis Mons"
   },
   {
     "id": 96720,
@@ -1485,7 +1486,8 @@
     ],
     "bait": "Any",
     "time": "Any",
-    "img": "https://render.guildwars2.com/file/B96852A7EE0452212B1FDB5FF92301BFB03B1DFB/2594687.png"
+    "img": "https://render.guildwars2.com/file/B96852A7EE0452212B1FDB5FF92301BFB03B1DFB/2594687.png",
+    "info": "Only in Draconis Mons"
   },
   {
     "id": 96589,
@@ -1497,7 +1499,8 @@
     ],
     "bait": "Any",
     "time": "Daytime",
-    "img": "https://render.guildwars2.com/file/6458143840570AA77E9798AE6FA06AC2E0BACE6C/2594685.png"
+    "img": "https://render.guildwars2.com/file/6458143840570AA77E9798AE6FA06AC2E0BACE6C/2594685.png",
+    "info": "Only in Draconis Mons"
   },
   {
     "id": 96283,
@@ -1509,7 +1512,8 @@
     ],
     "bait": "Any",
     "time": "Any",
-    "img": "https://render.guildwars2.com/file/5C686558C26A1040D40CC9EA0E05093C73E32ED3/2594683.png"
+    "img": "https://render.guildwars2.com/file/5C686558C26A1040D40CC9EA0E05093C73E32ED3/2594683.png",
+    "info": "Only in Draconis Mons"
   },
   {
     "id": 97471,
@@ -1521,7 +1525,8 @@
     ],
     "bait": "Any",
     "time": "Any",
-    "img": "https://render.guildwars2.com/file/54090FA3A3AA1670FC04D3421995D1690EF7F3F3/2594682.png"
+    "img": "https://render.guildwars2.com/file/54090FA3A3AA1670FC04D3421995D1690EF7F3F3/2594682.png",
+    "info": "Only in Draconis Mons"
   },
   {
     "id": 96530,
@@ -1533,7 +1538,8 @@
     ],
     "bait": "Lava Beetles",
     "time": "Daytime",
-    "img": "https://render.guildwars2.com/file/CB0C9F753C9E006BFC535E40E35F592E1A903428/2594690.png"
+    "img": "https://render.guildwars2.com/file/CB0C9F753C9E006BFC535E40E35F592E1A903428/2594690.png",
+    "info": "Only in Draconis Mons"
   },
   {
     "id": 96595,
@@ -1545,7 +1551,8 @@
     ],
     "bait": "Lava Beetles",
     "time": "Any",
-    "img": "https://render.guildwars2.com/file/37D51ED69ABACA941D7FB5010D7C0F760880B13E/2594678.png"
+    "img": "https://render.guildwars2.com/file/37D51ED69ABACA941D7FB5010D7C0F760880B13E/2594678.png",
+    "info": "Only in Draconis Mons"
   },
   {
     "id": 96491,
@@ -1558,7 +1565,8 @@
     ],
     "bait": "Any",
     "time": "Any",
-    "img": "https://render.guildwars2.com/file/387EFB0C7AE4EF2AA4F8DB1B75481D670D53401C/2594686.png"
+    "img": "https://render.guildwars2.com/file/387EFB0C7AE4EF2AA4F8DB1B75481D670D53401C/2594686.png",
+    "info": "Only in Ember Bay"
   },
   {
     "id": 96597,
@@ -1571,7 +1579,8 @@
     ],
     "bait": "Any",
     "time": "Any",
-    "img": "https://render.guildwars2.com/file/0EB99FF1019B1351F8E567B93A6097F1B5337356/2594688.png"
+    "img": "https://render.guildwars2.com/file/0EB99FF1019B1351F8E567B93A6097F1B5337356/2594688.png",
+    "info": "Only in Ember Bay"
   },
   {
     "id": 96889,
@@ -1583,7 +1592,8 @@
     ],
     "bait": "Any",
     "time": "Nighttime",
-    "img": "https://render.guildwars2.com/file/6F0EB34EEB69DEBCC31E6B04B52FB41CC003514B/2594681.png"
+    "img": "https://render.guildwars2.com/file/6F0EB34EEB69DEBCC31E6B04B52FB41CC003514B/2594681.png",
+    "info": "Only in Ember Bay"
   },
   {
     "id": 96555,
@@ -1595,7 +1605,8 @@
     ],
     "bait": "Any",
     "time": "Any",
-    "img": "https://render.guildwars2.com/file/B9E08066659DBDA3D80B2D4E27533D17034767ED/2594680.png"
+    "img": "https://render.guildwars2.com/file/B9E08066659DBDA3D80B2D4E27533D17034767ED/2594680.png",
+    "info": "Only in Ember Bay"
   },
   {
     "id": 97100,
@@ -1607,7 +1618,8 @@
     ],
     "bait": "Any",
     "time": "Daytime",
-    "img": "https://render.guildwars2.com/file/945BED76CA3845D2D5315ED67369B319D903F9B8/2594679.png"
+    "img": "https://render.guildwars2.com/file/945BED76CA3845D2D5315ED67369B319D903F9B8/2594679.png",
+    "info": "Only in Ember Bay"
   },
   {
     "id": 97498,
@@ -1619,7 +1631,8 @@
     ],
     "bait": "Lava Beetles",
     "time": "Nighttime",
-    "img": "https://render.guildwars2.com/file/F7066703DC61CBEC185440AC429A1C239A7846CA/2594689.png"
+    "img": "https://render.guildwars2.com/file/F7066703DC61CBEC185440AC429A1C239A7846CA/2594689.png",
+    "info": "Only in Ember Bay"
   },
   {
     "id": 96361,
@@ -1631,7 +1644,8 @@
     ],
     "bait": "Lava Beetles",
     "time": "Any",
-    "img": "https://render.guildwars2.com/file/FDAFE721B54EA9C7721F9245ED1992B53F6AB3F0/2594677.png"
+    "img": "https://render.guildwars2.com/file/FDAFE721B54EA9C7721F9245ED1992B53F6AB3F0/2594677.png",
+    "info": "Only in Ember Bay"
   },
   {
     "id": 96852,

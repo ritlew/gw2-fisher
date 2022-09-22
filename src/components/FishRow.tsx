@@ -2,8 +2,17 @@
 import React, { useContext } from 'react'
 
 // chakra ui
-import { Tr, Td, VStack, Text, Image, Button, HStack } from '@chakra-ui/react'
-import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
+import {
+  Tr,
+  Td,
+  VStack,
+  Text,
+  Image,
+  Button,
+  HStack,
+  Tooltip,
+} from '@chakra-ui/react'
+import { CheckIcon, CloseIcon, InfoIcon } from '@chakra-ui/icons'
 
 // local
 import Fish from '../fish.interface'
@@ -33,7 +42,14 @@ const FishRow: React.FC<FishRowProps> = ({ fish }) => {
         )}
       </Td>
       <Td>
-        <Text>{fish.name}</Text>
+        <HStack>
+          <Text>{fish.name}</Text>
+          {fish.info && (
+            <Tooltip label={fish.info}>
+              <InfoIcon />
+            </Tooltip>
+          )}
+        </HStack>
         <Text fontSize="xs" color={getRarityColor(fish.rarity)}>
           {fish.rarity}
         </Text>

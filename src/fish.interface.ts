@@ -22,6 +22,7 @@ interface Fish {
   time: Time
   rarity: Rarity
   img: string
+  info?: string
 }
 
 export default Fish

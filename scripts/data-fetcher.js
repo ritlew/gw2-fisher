@@ -1,8 +1,9 @@
 /* eslint @typescript-eslint/no-var-requires: 0 */
 const fs = require('fs')
 const { parse } = require('node-html-parser')
+const fishList = require('../src/data/fish')
 
-const useCache = true
+const useCache = false
 
 console.log('Fetching fishing achievements list')
 fetch('https://api.guildwars2.com/v2/achievements/categories/317')
@@ -71,7 +72,7 @@ fetch('https://api.guildwars2.com/v2/achievements/categories/317')
     })
     */
     const mapped = await Promise.all(
-      fishData.map(async (fish, i) => {
+      fishData.map(async (fish) => {
         const res = await fetch(
           `https://wiki.guildwars2.com/wiki/${fish.name.replace(' ', '_')}`
         )
@@ -93,7 +94,12 @@ fetch('https://api.guildwars2.com/v2/achievements/categories/317')
         const holes = match[1].split(',').map((hole) => hole.trim())
         const bait = match[2].trim()
         const time = match[3].trim()
+
+        // there is some data populated by hand that we want to preserve
+        const oldFish = fishList.find((oldFish) => oldFish.id === fish.id)
+
         return {
+          ...oldFish,
           id: fish.id,
           name: fish.name,
           rarity: fish.rarity,
@@ -106,5 +112,5 @@ fetch('https://api.guildwars2.com/v2/achievements/categories/317')
       })
     )
     console.log('Writing fish.json')
-    fs.writeFileSync('src/fish.json', JSON.stringify(mapped, null, 2))
+    fs.writeFileSync('../src/data/fish.json', JSON.stringify(mapped, null, 2))
   })
